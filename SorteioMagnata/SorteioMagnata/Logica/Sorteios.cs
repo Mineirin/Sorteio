@@ -17,23 +17,7 @@ namespace SorteioMagnata.Logica
         {
             InitializeComponent();
         }
-
-        static void Lista(string[] args)
-        {
-            List<Int32> NumerosSorteio;
-            NumerosSorteio = new List<Int32>();
-
-            for (int i = 1; i < 80; i++)
-            {
-                NumerosSorteio.Add(i);
-            }
-
-            foreach (var item in NumerosSorteio)
-            {
-
-            }
-        }
-
+        
         private void telaSorteio()
         {
             lblNomeSorteio.Text = txtNomeSorteio.Text;
