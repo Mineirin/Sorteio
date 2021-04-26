@@ -42,23 +42,12 @@ namespace SorteioMagnata.Logica
 
         private void CarregaLista()
         {
-            con.AbrirCon();
-            sql = "SELECT * FROM apostas order by participantes asc";
-            cmd = new MySqlCommand(sql, con.con);
-            MySqlDataAdapter da = new MySqlDataAdapter();
-            da.SelectCommand = cmd;
-
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-
-            Grid.DataSource = dt;
-            con.FecharCon();
-            // FormatarDG();
+            
         }
 
         private void btnAleatorio_Click(object sender, System.EventArgs e)
         {
-            Random Aleatorio = new Random();
+            
         }
 
         private void FrmApostas_Load(object sender, EventArgs e)
@@ -68,28 +57,7 @@ namespace SorteioMagnata.Logica
 
         private void btnSalvarSorteio_Click(object sender, EventArgs e)
         {
-            con.AbrirCon();
-            sql = "INSERT INTO apostas (id, participantes, numeroaposta1, numeroaposta2, numeroaposta3, numeroaposta4, numeroaposta5, numeroaposta6, numeroaposta7, " +
-                "numeroaposta8, numeroaposta9, numeroaposta10, data) VALUES (@id, @participantes, @numeroaposta1, @numeroaposta2, @numeroaposta3, @numeroaposta4, @numeroaposta5, " +
-                "@numeroaposta6, @numeroaposta7, @numeroaposta8, @numeroaposta9, @numeroaposta10, curDate())";
-            cmd = new MySqlCommand(sql, con.con);
-            cmd.Parameters.AddWithValue("@id", id);
-            cmd.Parameters.AddWithValue("@participantes", txtNomeApostador.Text);
-            cmd.Parameters.AddWithValue("@numeroaposta1", txtNumeroAposta1.Text);
-            cmd.Parameters.AddWithValue("@numeroaposta2", txtNumeroAposta2.Text);
-            cmd.Parameters.AddWithValue("@numeroaposta3", txtNumeroAposta3.Text);
-            cmd.Parameters.AddWithValue("@numeroaposta4", txtNumeroAposta4.Text);
-            cmd.Parameters.AddWithValue("@numeroaposta5", txtNumeroAposta5.Text);
-            cmd.Parameters.AddWithValue("@numeroaposta6", txtNumeroAposta6.Text);
-            cmd.Parameters.AddWithValue("@numeroaposta7", txtNumeroAposta7.Text);
-            cmd.Parameters.AddWithValue("@numeroaposta8", txtNumeroAposta8.Text);
-            cmd.Parameters.AddWithValue("@numeroaposta9", txtNumeroAposta9.Text);
-            cmd.Parameters.AddWithValue("@numeroaposta10", txtNumeroAposta10.Text);
-           
-            cmd.ExecuteNonQuery();
-            con.FecharCon();
-            //FormatarDG();
-            CarregaLista();
+            
         }
     }
 }
