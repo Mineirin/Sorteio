@@ -45,10 +45,11 @@ namespace SorteioMagnata
             this.pnlLogin.Controls.Add(this.btnLogin);
             this.pnlLogin.Controls.Add(this.txtSenha);
             this.pnlLogin.Controls.Add(this.txtUsuario);
-            this.pnlLogin.Location = new System.Drawing.Point(354, 145);
+            this.pnlLogin.Location = new System.Drawing.Point(550, 250);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(309, 371);
             this.pnlLogin.TabIndex = 0;
+            this.pnlLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogin_Paint);
             // 
             // btnLogin
             // 
@@ -101,6 +102,7 @@ namespace SorteioMagnata
             this.Name = "FrmLogin";
             this.Text = "Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmLogin_FormClosed);
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.Resize += new System.EventHandler(this.FrmLogin_Resize);
             this.pnlLogin.ResumeLayout(false);

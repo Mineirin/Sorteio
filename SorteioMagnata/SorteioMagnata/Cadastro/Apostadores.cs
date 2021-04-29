@@ -20,7 +20,7 @@ namespace SorteioMagnata.Cadastro
         private void CarregarCombobox()
         {
             con.AbrirCon();
-            sql = "SELECT * FROM cambistas order by cargo asc";
+            sql = "SELECT * FROM apostadores order by cargo asc";
             cmd = new MySqlCommand(sql, con.con);
             MySqlDataAdapter da = new MySqlDataAdapter();
             da.SelectCommand = cmd;

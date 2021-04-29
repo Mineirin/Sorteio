@@ -17,7 +17,7 @@ namespace SorteioMagnata
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-            pnlLogin.Location = new Point(this.Width / 2 - 250, this.Height / 2 - 150);
+            pnlLogin.Location = new Point(this.Width / 2 - 150, this.Height / 2 - 150);
             pnlLogin.Visible = true;
         }
 
@@ -95,6 +95,16 @@ namespace SorteioMagnata
         private void FrmLogin_Resize(object sender, EventArgs e)
         {
             pnlLogin.Location = new Point(this.Width / 2 - 150, this.Height / 2 - 250);
+        }
+
+        private void FrmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pnlLogin_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
