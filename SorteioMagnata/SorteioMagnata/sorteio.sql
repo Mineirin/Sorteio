@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26/04/2021 às 23:48
+-- Tempo de geração: 29/04/2021 às 22:22
 -- Versão do servidor: 10.4.11-MariaDB
 -- Versão do PHP: 7.4.6
 
@@ -52,17 +52,29 @@ INSERT INTO `apostadores` (`id`, `nome`, `celular`, `cargo`, `data`) VALUES
 
 CREATE TABLE `apostas` (
   `id` int(11) NOT NULL,
-  `participantes` varchar(30) NOT NULL,
+  `nomecartela` varchar(40) NOT NULL,
+  `acertos` int(11) NOT NULL DEFAULT 0,
+  `idapostador` int(11) NOT NULL,
   `numeroaposta1` varchar(10) NOT NULL,
+  `aposta1flag` tinyint(1) NOT NULL DEFAULT 0,
   `numeroaposta2` varchar(10) NOT NULL,
+  `aposta2flag` tinyint(1) NOT NULL DEFAULT 0,
   `numeroaposta3` varchar(10) NOT NULL,
+  `aposta3flag` tinyint(1) NOT NULL DEFAULT 0,
   `numeroaposta4` varchar(10) NOT NULL,
+  `aposta4flag` tinyint(1) NOT NULL DEFAULT 0,
   `numeroaposta5` varchar(10) NOT NULL,
+  `aposta5flag` tinyint(1) NOT NULL DEFAULT 0,
   `numeroaposta6` varchar(10) NOT NULL,
+  `aposta6flag` tinyint(1) NOT NULL DEFAULT 0,
   `numeroaposta7` varchar(10) NOT NULL,
+  `aposta7flag` tinyint(1) NOT NULL DEFAULT 0,
   `numeroaposta8` varchar(10) NOT NULL,
+  `aposta8flag` tinyint(1) NOT NULL DEFAULT 0,
   `numeroaposta9` varchar(10) NOT NULL,
+  `aposta9flag` tinyint(1) NOT NULL DEFAULT 0,
   `numeroaposta10` varchar(10) NOT NULL,
+  `aposta10flag` tinyint(1) NOT NULL DEFAULT 0,
   `data` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -70,8 +82,15 @@ CREATE TABLE `apostas` (
 -- Despejando dados para a tabela `apostas`
 --
 
-INSERT INTO `apostas` (`id`, `participantes`, `numeroaposta1`, `numeroaposta2`, `numeroaposta3`, `numeroaposta4`, `numeroaposta5`, `numeroaposta6`, `numeroaposta7`, `numeroaposta8`, `numeroaposta9`, `numeroaposta10`, `data`) VALUES
-(2, 'Nivia', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '2021-04-23');
+INSERT INTO `apostas` (`id`, `nomecartela`, `acertos`, `idapostador`, `numeroaposta1`, `aposta1flag`, `numeroaposta2`, `aposta2flag`, `numeroaposta3`, `aposta3flag`, `numeroaposta4`, `aposta4flag`, `numeroaposta5`, `aposta5flag`, `numeroaposta6`, `aposta6flag`, `numeroaposta7`, `aposta7flag`, `numeroaposta8`, `aposta8flag`, `numeroaposta9`, `aposta9flag`, `numeroaposta10`, `aposta10flag`, `data`) VALUES
+(41, 'Arthur (1)', 1, 3, '3', 0, '56', 0, '42', 0, '25', 0, '73', 0, '48', 0, '8', 0, '61', 0, '13', 1, '52', 0, '2021-04-29'),
+(42, 'Nivia (1)', 1, 2, '34', 0, '12', 1, '16', 0, '5', 0, '73', 0, '18', 0, '34', 0, '66', 0, '46', 0, '57', 0, '2021-04-29'),
+(43, 'Ricardo (1)', 1, 4, '72', 0, '42', 0, '49', 0, '20', 0, '41', 0, '14', 1, '3', 0, '77', 0, '68', 0, '29', 0, '2021-04-29'),
+(44, 'Arthur (2)', 0, 3, '21', 0, '70', 0, '16', 0, '20', 0, '80', 0, '41', 0, '69', 0, '71', 0, '35', 0, '20', 0, '2021-04-29'),
+(45, 'Nivia (2)', 0, 2, '25', 0, '18', 0, '49', 0, '7', 0, '79', 0, '36', 0, '74', 0, '69', 0, '46', 0, '23', 0, '2021-04-29'),
+(46, 'Ricardo (2)', 0, 4, '57', 0, '36', 0, '76', 0, '27', 0, '36', 0, '34', 0, '31', 0, '68', 0, '80', 0, '21', 0, '2021-04-29'),
+(47, 'Arthur (3)', 3, 3, '64', 0, '31', 0, '24', 0, '70', 0, '17', 1, '11', 1, '68', 0, '17', 1, '49', 0, '58', 0, '2021-04-29'),
+(48, 'Arthur (4)', 0, 3, '18', 0, '67', 0, '68', 0, '36', 0, '2', 0, '7', 0, '54', 0, '62', 0, '62', 0, '25', 0, '2021-04-29');
 
 -- --------------------------------------------------------
 
@@ -123,10 +142,23 @@ INSERT INTO `cargos` (`id`, `cargo`) VALUES
 
 CREATE TABLE `resultsorteio` (
   `id` int(11) NOT NULL,
-  `participantes` varchar(30) NOT NULL,
-  `numaposta` int(11) NOT NULL,
-  `acertos` int(11) NOT NULL
+  `nomesorteio` varchar(50) NOT NULL,
+  `numero1` varchar(10) NOT NULL,
+  `numero2` varchar(10) NOT NULL,
+  `numero3` varchar(10) NOT NULL,
+  `numero4` varchar(10) NOT NULL,
+  `numero5` varchar(10) NOT NULL,
+  `data` date NOT NULL,
+  `sorteios-finalizado` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Despejando dados para a tabela `resultsorteio`
+--
+
+INSERT INTO `resultsorteio` (`id`, `nomesorteio`, `numero1`, `numero2`, `numero3`, `numero4`, `numero5`, `data`, `sorteios-finalizado`) VALUES
+(64, 'Sorteio1', '11', '12', '13', '14', '15', '2021-04-29', 0),
+(65, 'sorteio76', '11', '12', '13', '15', '17', '2021-04-29', 0);
 
 -- --------------------------------------------------------
 
@@ -204,7 +236,7 @@ ALTER TABLE `apostadores`
 -- AUTO_INCREMENT de tabela `apostas`
 --
 ALTER TABLE `apostas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT de tabela `cambistas`
@@ -222,23 +254,13 @@ ALTER TABLE `cargos`
 -- AUTO_INCREMENT de tabela `resultsorteio`
 --
 ALTER TABLE `resultsorteio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- Restrições para dumps de tabelas
---
-
---
--- Restrições para tabelas `apostas`
---
-ALTER TABLE `apostas`
-  ADD CONSTRAINT `apostas_ibfk_1` FOREIGN KEY (`id`) REFERENCES `apostadores` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
