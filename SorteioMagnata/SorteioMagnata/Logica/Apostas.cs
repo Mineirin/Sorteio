@@ -66,16 +66,16 @@ namespace SorteioMagnata.Logica
 
             numApostas.Sort();
 
-            txtNumeroAposta1.Text = numApostas[0].ToString();
-            txtNumeroAposta2.Text = numApostas[1].ToString();
-            txtNumeroAposta3.Text = numApostas[2].ToString();
-            txtNumeroAposta4.Text = numApostas[3].ToString();
-            txtNumeroAposta5.Text = numApostas[4].ToString();
-            txtNumeroAposta6.Text = numApostas[5].ToString();
-            txtNumeroAposta7.Text = numApostas[6].ToString();
-            txtNumeroAposta8.Text = numApostas[7].ToString();
-            txtNumeroAposta9.Text = numApostas[8].ToString();
-            txtNumeroAposta10.Text = numApostas[9].ToString();
+            txtNumeroAposta1.Text = numApostas[0].ToString("D2");
+            txtNumeroAposta2.Text = numApostas[1].ToString("D2");
+            txtNumeroAposta3.Text = numApostas[2].ToString("D2");
+            txtNumeroAposta4.Text = numApostas[3].ToString("D2");
+            txtNumeroAposta5.Text = numApostas[4].ToString("D2");
+            txtNumeroAposta6.Text = numApostas[5].ToString("D2");
+            txtNumeroAposta7.Text = numApostas[6].ToString("D2");
+            txtNumeroAposta8.Text = numApostas[7].ToString("D2");
+            txtNumeroAposta9.Text = numApostas[8].ToString("D2");
+            txtNumeroAposta10.Text = numApostas[9].ToString("D2");
 
         }
 
@@ -135,16 +135,16 @@ namespace SorteioMagnata.Logica
             cmd = new MySqlCommand(sql, con.con);
             
             cmd.Parameters.AddWithValue("@idapostador", cb_Apostadores.SelectedValue);
-            cmd.Parameters.AddWithValue("@numeroaposta1", txtNumeroAposta1.Text);
-            cmd.Parameters.AddWithValue("@numeroaposta2", txtNumeroAposta2.Text);
-            cmd.Parameters.AddWithValue("@numeroaposta3", txtNumeroAposta3.Text);
-            cmd.Parameters.AddWithValue("@numeroaposta4", txtNumeroAposta4.Text);
-            cmd.Parameters.AddWithValue("@numeroaposta5", txtNumeroAposta5.Text);
-            cmd.Parameters.AddWithValue("@numeroaposta6", txtNumeroAposta6.Text);
-            cmd.Parameters.AddWithValue("@numeroaposta7", txtNumeroAposta7.Text);
-            cmd.Parameters.AddWithValue("@numeroaposta8", txtNumeroAposta8.Text);
-            cmd.Parameters.AddWithValue("@numeroaposta9", txtNumeroAposta9.Text);
-            cmd.Parameters.AddWithValue("@numeroaposta10", txtNumeroAposta10.Text);
+            cmd.Parameters.AddWithValue("@numeroaposta1", txtNumeroAposta1.Text.PadLeft(2, '0'));
+            cmd.Parameters.AddWithValue("@numeroaposta2", txtNumeroAposta2.Text.PadLeft(2, '0'));
+            cmd.Parameters.AddWithValue("@numeroaposta3", txtNumeroAposta3.Text.PadLeft(2, '0'));
+            cmd.Parameters.AddWithValue("@numeroaposta4", txtNumeroAposta4.Text.PadLeft(2, '0'));
+            cmd.Parameters.AddWithValue("@numeroaposta5", txtNumeroAposta5.Text.PadLeft(2, '0'));
+            cmd.Parameters.AddWithValue("@numeroaposta6", txtNumeroAposta6.Text.PadLeft(2, '0'));
+            cmd.Parameters.AddWithValue("@numeroaposta7", txtNumeroAposta7.Text.PadLeft(2, '0'));
+            cmd.Parameters.AddWithValue("@numeroaposta8", txtNumeroAposta8.Text.PadLeft(2, '0'));
+            cmd.Parameters.AddWithValue("@numeroaposta9", txtNumeroAposta9.Text.PadLeft(2, '0'));
+            cmd.Parameters.AddWithValue("@numeroaposta10", txtNumeroAposta10.Text.PadLeft(2, '0'));
 
             //COUNT ID APOSTADOR PARA VER QUAL NOME COLOCAR
             MySqlCommand cmdVerificar;
