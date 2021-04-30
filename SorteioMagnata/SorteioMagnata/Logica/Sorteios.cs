@@ -1,8 +1,10 @@
 ﻿using MySql.Data.MySqlClient;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace SorteioMagnata.Logica
@@ -174,7 +176,13 @@ namespace SorteioMagnata.Logica
                         FormatarDGApostas();
                         con.FecharCon();
 
-                        MessageBox.Show("Alguem ja ganhou!", "Começar Novo Sorteio", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        LimparTabelaSorteio();
+                        FinalizarSorteio();
+
+                        DialogResult dialogResult = MessageBox.Show("Alguem já ganhou! \n\n Deseja exportar a lista de apostas?", "Começar Novo Sorteio", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        if (dialogResult == DialogResult.Yes)
+                            ExportarParaExcel(dtb);
+                       
                         return;
                     }
                     catch (Exception ex)
@@ -225,6 +233,70 @@ namespace SorteioMagnata.Logica
             
         }
 
+        private void FinalizarSorteio()
+        {
+            try
+            {
+                con.AbrirCon();
+                string sqlFinalizarSorteio = " UPDATE `resultsorteio` SET " +
+                    "`sorteios-finalizado` = 1 " +
+                    "ORDER BY `id` DESC " + 
+                    "LIMIT 1";
+                cmd = new MySqlCommand(sqlFinalizarSorteio, con.con);
+                MySqlCommand cmdFinalizarSorteio = new MySqlCommand(sqlFinalizarSorteio, con.con);
+                cmdFinalizarSorteio.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void LimparTabelaSorteio()
+        {
+            try
+            {
+                con.AbrirCon();
+                string sqlTruncate = " TRUNCATE TABLE apostas";
+                cmd = new MySqlCommand(sqlTruncate, con.con);
+                MySqlCommand cmdTruncate = new MySqlCommand(sqlTruncate, con.con);
+                cmdTruncate.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void ExportarParaExcel(DataTable dtb)
+        {
+            try
+            {
+                using (ExcelPackage pck = new ExcelPackage())
+                {
+                    ExcelWorksheet ws = pck.Workbook.Worksheets.Add("Apostas");
+                    ws.Cells["A1"].LoadFromDataTable(dtb, true);
+                    SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                    saveFileDialog1.InitialDirectory = @"C:\";
+                    saveFileDialog1.Title = "Salvar arquivo em:";
+                    saveFileDialog1.CheckPathExists = true;
+                    saveFileDialog1.DefaultExt = "xlsx";
+                    saveFileDialog1.Filter = "Arquivo do Excel *.xlsx | *.xlsx";
+                    saveFileDialog1.FilterIndex = 2;
+                    saveFileDialog1.RestoreDirectory = true;
+                    saveFileDialog1.ShowDialog();
+                    pck.SaveAs(new System.IO.FileInfo(saveFileDialog1.FileName));
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         private static Bitmap DrawControlToBitmap(Control control)
         {
             Bitmap bitmap = new Bitmap(control.Width, control.Height);
@@ -270,6 +342,7 @@ namespace SorteioMagnata.Logica
             Grid.Columns[10].Width = 45;
             Grid.Columns[11].Width = 100;
         }
+
 
         private void Listar()
         {

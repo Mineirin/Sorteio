@@ -64,16 +64,18 @@ namespace SorteioMagnata.Logica
                 }
             }
 
-            txtNumeroAposta1.Text = rand.Next(1, 81).ToString();
-            txtNumeroAposta2.Text = rand.Next(1, 81).ToString();
-            txtNumeroAposta3.Text = rand.Next(1, 81).ToString();
-            txtNumeroAposta4.Text = rand.Next(1, 81).ToString();
-            txtNumeroAposta5.Text = rand.Next(1, 81).ToString();
-            txtNumeroAposta6.Text = rand.Next(1, 81).ToString();
-            txtNumeroAposta7.Text = rand.Next(1, 81).ToString();
-            txtNumeroAposta8.Text = rand.Next(1, 81).ToString();
-            txtNumeroAposta9.Text = rand.Next(1, 81).ToString();
-            txtNumeroAposta10.Text = rand.Next(1, 81).ToString();
+            numApostas.Sort();
+
+            txtNumeroAposta1.Text = numApostas[0].ToString();
+            txtNumeroAposta2.Text = numApostas[1].ToString();
+            txtNumeroAposta3.Text = numApostas[2].ToString();
+            txtNumeroAposta4.Text = numApostas[3].ToString();
+            txtNumeroAposta5.Text = numApostas[4].ToString();
+            txtNumeroAposta6.Text = numApostas[5].ToString();
+            txtNumeroAposta7.Text = numApostas[6].ToString();
+            txtNumeroAposta8.Text = numApostas[7].ToString();
+            txtNumeroAposta9.Text = numApostas[8].ToString();
+            txtNumeroAposta10.Text = numApostas[9].ToString();
 
         }
 
