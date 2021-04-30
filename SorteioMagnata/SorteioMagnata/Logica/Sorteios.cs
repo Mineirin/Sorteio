@@ -79,11 +79,11 @@ namespace SorteioMagnata.Logica
             cmd = new MySqlCommand(sql, con.con);
 
             cmd.Parameters.AddWithValue("@nomesorteio", txtNomeSorteio.Text);
-            cmd.Parameters.AddWithValue("@numero1", txtNumero1.Text);
-            cmd.Parameters.AddWithValue("@numero2", txtNumero2.Text);
-            cmd.Parameters.AddWithValue("@numero3", txtNumero3.Text);
-            cmd.Parameters.AddWithValue("@numero4", txtNumero4.Text);
-            cmd.Parameters.AddWithValue("@numero5", txtNumero5.Text);
+            cmd.Parameters.AddWithValue("@numero1", txtNumero1.Text.PadLeft(2, '0'));
+            cmd.Parameters.AddWithValue("@numero2", txtNumero2.Text.PadLeft(2, '0'));
+            cmd.Parameters.AddWithValue("@numero3", txtNumero3.Text.PadLeft(2, '0'));
+            cmd.Parameters.AddWithValue("@numero4", txtNumero4.Text.PadLeft(2, '0'));
+            cmd.Parameters.AddWithValue("@numero5", txtNumero5.Text.PadLeft(2, '0'));
 
             //Lógica para verificar os números de apostas e bater com os números do sorteio
             MySqlCommand cmdVerificar;
@@ -94,11 +94,11 @@ namespace SorteioMagnata.Logica
             da.Fill(dt);
 
             List<string> numerosSorteio = new List<string>();
-            numerosSorteio.Add(txtNumero1.Text);
-            numerosSorteio.Add(txtNumero2.Text);
-            numerosSorteio.Add(txtNumero3.Text);
-            numerosSorteio.Add(txtNumero4.Text);
-            numerosSorteio.Add(txtNumero5.Text);
+            numerosSorteio.Add(txtNumero1.Text.PadLeft(2, '0'));
+            numerosSorteio.Add(txtNumero2.Text.PadLeft(2, '0'));
+            numerosSorteio.Add(txtNumero3.Text.PadLeft(2, '0'));
+            numerosSorteio.Add(txtNumero4.Text.PadLeft(2, '0'));
+            numerosSorteio.Add(txtNumero5.Text.PadLeft(2, '0'));
 
             
 
