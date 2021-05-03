@@ -67,6 +67,8 @@ namespace SorteioMagnata
             this.label12 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.menuTopo.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.pnlMenuGrid.SuspendLayout();
@@ -193,9 +195,9 @@ namespace SorteioMagnata
             this.pnlMenu.Controls.Add(this.btnApostas);
             this.pnlMenu.Controls.Add(this.btnCambistas);
             this.pnlMenu.Controls.Add(this.btnApostadores);
-            this.pnlMenu.Location = new System.Drawing.Point(170, 105);
+            this.pnlMenu.Location = new System.Drawing.Point(165, 105);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(949, 249);
+            this.pnlMenu.Size = new System.Drawing.Size(912, 249);
             this.pnlMenu.TabIndex = 1;
             this.pnlMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMenu_Paint);
             // 
@@ -206,7 +208,7 @@ namespace SorteioMagnata
             this.lbl_Apostadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_Apostadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Apostadores.ForeColor = System.Drawing.Color.White;
-            this.lbl_Apostadores.Location = new System.Drawing.Point(93, 185);
+            this.lbl_Apostadores.Location = new System.Drawing.Point(76, 185);
             this.lbl_Apostadores.Name = "lbl_Apostadores";
             this.lbl_Apostadores.Size = new System.Drawing.Size(25, 25);
             this.lbl_Apostadores.TabIndex = 10;
@@ -219,7 +221,7 @@ namespace SorteioMagnata
             this.lbl_Total.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Total.ForeColor = System.Drawing.Color.White;
-            this.lbl_Total.Location = new System.Drawing.Point(837, 185);
+            this.lbl_Total.Location = new System.Drawing.Point(820, 185);
             this.lbl_Total.Name = "lbl_Total";
             this.lbl_Total.Size = new System.Drawing.Size(25, 25);
             this.lbl_Total.TabIndex = 9;
@@ -232,7 +234,7 @@ namespace SorteioMagnata
             this.lbl_Sorteios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_Sorteios.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Sorteios.ForeColor = System.Drawing.Color.White;
-            this.lbl_Sorteios.Location = new System.Drawing.Point(653, 185);
+            this.lbl_Sorteios.Location = new System.Drawing.Point(636, 185);
             this.lbl_Sorteios.Name = "lbl_Sorteios";
             this.lbl_Sorteios.Size = new System.Drawing.Size(25, 25);
             this.lbl_Sorteios.TabIndex = 8;
@@ -245,7 +247,7 @@ namespace SorteioMagnata
             this.lbl_Apostas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_Apostas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Apostas.ForeColor = System.Drawing.Color.White;
-            this.lbl_Apostas.Location = new System.Drawing.Point(470, 185);
+            this.lbl_Apostas.Location = new System.Drawing.Point(453, 185);
             this.lbl_Apostas.Name = "lbl_Apostas";
             this.lbl_Apostas.Size = new System.Drawing.Size(25, 25);
             this.lbl_Apostas.TabIndex = 7;
@@ -258,7 +260,7 @@ namespace SorteioMagnata
             this.lbl_Cambistas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_Cambistas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Cambistas.ForeColor = System.Drawing.Color.White;
-            this.lbl_Cambistas.Location = new System.Drawing.Point(283, 185);
+            this.lbl_Cambistas.Location = new System.Drawing.Point(266, 185);
             this.lbl_Cambistas.Name = "lbl_Cambistas";
             this.lbl_Cambistas.Size = new System.Drawing.Size(25, 25);
             this.lbl_Cambistas.TabIndex = 6;
@@ -271,7 +273,7 @@ namespace SorteioMagnata
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(763, 16);
+            this.button1.Location = new System.Drawing.Point(740, 16);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(169, 217);
             this.button1.TabIndex = 4;
@@ -286,7 +288,7 @@ namespace SorteioMagnata
             this.btnSorteios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSorteios.ForeColor = System.Drawing.Color.White;
             this.btnSorteios.Image = ((System.Drawing.Image)(resources.GetObject("btnSorteios.Image")));
-            this.btnSorteios.Location = new System.Drawing.Point(577, 16);
+            this.btnSorteios.Location = new System.Drawing.Point(555, 16);
             this.btnSorteios.Name = "btnSorteios";
             this.btnSorteios.Size = new System.Drawing.Size(169, 217);
             this.btnSorteios.TabIndex = 3;
@@ -302,7 +304,7 @@ namespace SorteioMagnata
             this.btnApostas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApostas.ForeColor = System.Drawing.Color.White;
             this.btnApostas.Image = ((System.Drawing.Image)(resources.GetObject("btnApostas.Image")));
-            this.btnApostas.Location = new System.Drawing.Point(391, 16);
+            this.btnApostas.Location = new System.Drawing.Point(370, 16);
             this.btnApostas.Name = "btnApostas";
             this.btnApostas.Size = new System.Drawing.Size(169, 217);
             this.btnApostas.TabIndex = 2;
@@ -318,7 +320,7 @@ namespace SorteioMagnata
             this.btnCambistas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCambistas.ForeColor = System.Drawing.Color.White;
             this.btnCambistas.Image = ((System.Drawing.Image)(resources.GetObject("btnCambistas.Image")));
-            this.btnCambistas.Location = new System.Drawing.Point(205, 16);
+            this.btnCambistas.Location = new System.Drawing.Point(185, 16);
             this.btnCambistas.Name = "btnCambistas";
             this.btnCambistas.Size = new System.Drawing.Size(169, 217);
             this.btnCambistas.TabIndex = 1;
@@ -336,7 +338,7 @@ namespace SorteioMagnata
             this.btnApostadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApostadores.ForeColor = System.Drawing.Color.White;
             this.btnApostadores.Image = ((System.Drawing.Image)(resources.GetObject("btnApostadores.Image")));
-            this.btnApostadores.Location = new System.Drawing.Point(19, 16);
+            this.btnApostadores.Location = new System.Drawing.Point(2, 16);
             this.btnApostadores.Name = "btnApostadores";
             this.btnApostadores.Size = new System.Drawing.Size(167, 217);
             this.btnApostadores.TabIndex = 0;
@@ -348,6 +350,8 @@ namespace SorteioMagnata
             // pnlMenuGrid
             // 
             this.pnlMenuGrid.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlMenuGrid.Controls.Add(this.btnEditar);
+            this.pnlMenuGrid.Controls.Add(this.btnExcluir);
             this.pnlMenuGrid.Controls.Add(this.Grid);
             this.pnlMenuGrid.Controls.Add(this.label13);
             this.pnlMenuGrid.Controls.Add(this.txtBuscar);
@@ -357,9 +361,9 @@ namespace SorteioMagnata
             this.pnlMenuGrid.Controls.Add(this.label9);
             this.pnlMenuGrid.Controls.Add(this.label8);
             this.pnlMenuGrid.Controls.Add(this.label10);
-            this.pnlMenuGrid.Location = new System.Drawing.Point(189, 361);
+            this.pnlMenuGrid.Location = new System.Drawing.Point(165, 361);
             this.pnlMenuGrid.Name = "pnlMenuGrid";
-            this.pnlMenuGrid.Size = new System.Drawing.Size(913, 688);
+            this.pnlMenuGrid.Size = new System.Drawing.Size(911, 688);
             this.pnlMenuGrid.TabIndex = 2;
             this.pnlMenuGrid.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMenuGrid_Paint);
             // 
@@ -371,12 +375,13 @@ namespace SorteioMagnata
             this.Grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Grid.Location = new System.Drawing.Point(27, 62);
+            this.Grid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Grid.Location = new System.Drawing.Point(0, 62);
             this.Grid.Name = "Grid";
             this.Grid.ReadOnly = true;
-            this.Grid.Size = new System.Drawing.Size(861, 392);
+            this.Grid.Size = new System.Drawing.Size(807, 623);
             this.Grid.TabIndex = 16;
+            this.Grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
             // 
             // label13
             // 
@@ -503,6 +508,31 @@ namespace SorteioMagnata
             this.label11.TabIndex = 7;
             this.label11.Text = "Nome:";
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Enabled = false;
+            this.btnExcluir.FlatAppearance.BorderSize = 0;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.Location = new System.Drawing.Point(813, 135);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(67, 67);
+            this.btnExcluir.TabIndex = 18;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Enabled = false;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.Location = new System.Drawing.Point(813, 62);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(67, 67);
+            this.btnEditar.TabIndex = 17;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -578,5 +608,7 @@ namespace SorteioMagnata
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView Grid;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

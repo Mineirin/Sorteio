@@ -110,6 +110,12 @@
     <Compile Include="Logica\Apostas.Designer.cs">
       <DependentUpon>Apostas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica\EditarAposta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logica\EditarAposta.Designer.cs">
+      <DependentUpon>EditarAposta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Logica\Sorteios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     <EmbeddedResource Include="Logica\Apostas.resx">
       <DependentUpon>Apostas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Logica\EditarAposta.resx">
+      <DependentUpon>EditarAposta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Logica\Sorteios.resx">
       <DependentUpon>Sorteios.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +173,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Conexao.datasource" />
+    <None Include="Properties\DataSources\FrmLogin.datasource" />
+    <None Include="Properties\DataSources\FrmMenu.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\SorteioMagnata.Cadastro.FrmApostadores.datasource" />
+    <None Include="Properties\DataSources\SorteioMagnata.Cadastro.FrmCambistas.datasource" />
+    <None Include="Properties\DataSources\SorteioMagnata.Cadastro.FrmCargo.datasource" />
+    <None Include="Properties\DataSources\SorteioMagnata.Cadastro.FrmUsuarios.datasource" />
+    <None Include="Properties\DataSources\SorteioMagnata.Logica.FrmApostas.datasource" />
+    <None Include="Properties\DataSources\SorteioMagnata.Logica.FrmSorteios.datasource" />
+    <None Include="Properties\DataSources\SorteioMagnata.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\SorteioMagnata.Properties.Settings.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -135,10 +135,13 @@ namespace SorteioMagnata.Logica
                             {
                                 flagNumSorteado[j - 1] = true;
                                 acertosAtual++;
+                                if(flagNumSorteado[j - 1] == true)
+                                {
+                                    Console.BackgroundColor = ConsoleColor.Yellow;
+                                }
                             }
                         }
-                    }
-                    
+                    }                 
                 }
 
                 int acertosTotais = acertosAnterior + acertosAtual;

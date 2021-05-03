@@ -13,6 +13,8 @@ namespace SorteioMagnata
         MySqlCommand cmd;
         string id;
 
+        private readonly DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+
         public FrmMenu()
         {
             InitializeComponent();
@@ -89,7 +91,7 @@ namespace SorteioMagnata
 
         private void pnlMenu_Paint(object sender, PaintEventArgs e)
         {
-            pnlMenu.Location = new Point(this.Width / 2 - 500, this.Height / 2 - 350);
+            pnlMenu.Location = new Point(this.Width / 2 - 480, this.Height / 2 - 350);
         }
 
         private void pnlMenuGrid_Paint(object sender, PaintEventArgs e)
@@ -163,17 +165,19 @@ namespace SorteioMagnata
             Grid.Columns[12].HeaderText = "Data";
 
             Grid.Columns[0].Width =180;
-            Grid.Columns[1].Width = 45;
-            Grid.Columns[2].Width = 45;
-            Grid.Columns[3].Width = 45;
-            Grid.Columns[4].Width = 45;
-            Grid.Columns[5].Width = 45;
-            Grid.Columns[6].Width = 45;
-            Grid.Columns[7].Width = 45;
-            Grid.Columns[8].Width = 45;
-            Grid.Columns[9].Width = 45;
+            Grid.Columns[1].Width = 30;
+            Grid.Columns[2].Width = 30;
+            Grid.Columns[3].Width = 30;
+            Grid.Columns[4].Width = 30;
+            Grid.Columns[5].Width = 30;
+            Grid.Columns[6].Width = 30;
+            Grid.Columns[7].Width = 30;
+            Grid.Columns[8].Width = 30;
+            Grid.Columns[9].Width = 30;
             Grid.Columns[10].Width = 45;
-            Grid.Columns[11].Width = 80;
+            Grid.Columns[11].Width = 60;
+            Grid.Columns[12].Width = 80;
+
         }
 
         private void FormatarDGSorteios()
@@ -184,13 +188,14 @@ namespace SorteioMagnata
             Grid.Columns[3].HeaderText = "";
             Grid.Columns[4].HeaderText = "";
             Grid.Columns[5].HeaderText = "";
+            Grid.Columns[6].HeaderText = "Data";
 
             Grid.Columns[0].Width = 350;
             Grid.Columns[1].Width = 50;
             Grid.Columns[2].Width = 50;
             Grid.Columns[3].Width = 50;
             Grid.Columns[4].Width = 50;
-            Grid.Columns[5].Width = 50;
+            Grid.Columns[5].Width = 60;
             Grid.Columns[6].Width = 150;
         }
         private void FormatarDG()
@@ -199,13 +204,15 @@ namespace SorteioMagnata
             Grid.Columns[1].HeaderText = "Nome";
             Grid.Columns[2].HeaderText = "Celular";
             Grid.Columns[3].HeaderText = "Cargo";
+            Grid.Columns[4].HeaderText = "Data";
 
             Grid.Columns[0].Visible = false;
 
             Grid.Columns[1].Width = 300;
             Grid.Columns[2].Width = 200;
-            Grid.Columns[3].Width = 200;
-            Grid.Columns[4].Width = 120;
+            Grid.Columns[3].Width = 100;
+            Grid.Columns[4].Width = 100;
+
         }
 
         private void btnApostadores_Click(object sender, EventArgs e)
@@ -301,6 +308,18 @@ namespace SorteioMagnata
         private void FrmMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnEditar.Enabled = true;
+            btnExcluir.Enabled = true;
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Logica.EditarAposta form = new Logica.EditarAposta();
+            form.Show();
         }
     }
 }
