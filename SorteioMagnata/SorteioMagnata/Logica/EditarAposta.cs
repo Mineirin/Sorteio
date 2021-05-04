@@ -149,6 +149,7 @@ namespace SorteioMagnata.Logica
             cmd.Parameters.AddWithValue("@numeroaposta8", txtNumeroAposta8.Text.PadLeft(2, '0'));
             cmd.Parameters.AddWithValue("@numeroaposta9", txtNumeroAposta9.Text.PadLeft(2, '0'));
             cmd.Parameters.AddWithValue("@numeroaposta10", txtNumeroAposta10.Text.PadLeft(2, '0'));
+            cmd.Parameters.AddWithValue("@id", id);
 
             cmd.ExecuteNonQuery();
             con.FecharCon();
@@ -213,7 +214,7 @@ namespace SorteioMagnata.Logica
 
         private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            cb_Apostadores.Text = GridEditAposta.CurrentRow.Cells[0].Value.ToString();
+            id = GridEditAposta.CurrentRow.Cells[0].Value.ToString();
             txtNumeroAposta1.Text = GridEditAposta.CurrentRow.Cells[1].Value.ToString();
             txtNumeroAposta2.Text = GridEditAposta.CurrentRow.Cells[2].Value.ToString();
             txtNumeroAposta3.Text = GridEditAposta.CurrentRow.Cells[3].Value.ToString();

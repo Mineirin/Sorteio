@@ -69,6 +69,8 @@ namespace SorteioMagnata
             this.label11 = new System.Windows.Forms.Label();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuTopo.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.pnlMenuGrid.SuspendLayout();
@@ -350,6 +352,8 @@ namespace SorteioMagnata
             // pnlMenuGrid
             // 
             this.pnlMenuGrid.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlMenuGrid.Controls.Add(this.label2);
+            this.pnlMenuGrid.Controls.Add(this.label1);
             this.pnlMenuGrid.Controls.Add(this.btnEditar);
             this.pnlMenuGrid.Controls.Add(this.btnExcluir);
             this.pnlMenuGrid.Controls.Add(this.Grid);
@@ -514,11 +518,12 @@ namespace SorteioMagnata
             this.btnExcluir.FlatAppearance.BorderSize = 0;
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
-            this.btnExcluir.Location = new System.Drawing.Point(813, 135);
+            this.btnExcluir.Location = new System.Drawing.Point(815, 158);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(67, 67);
             this.btnExcluir.TabIndex = 18;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnEditar
             // 
@@ -532,6 +537,24 @@ namespace SorteioMagnata
             this.btnEditar.TabIndex = 17;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(812, 129);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 13);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Editar Apostas";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(812, 228);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Excluir Apostas";
             // 
             // FrmMenu
             // 
@@ -550,6 +573,7 @@ namespace SorteioMagnata
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuTopo;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmMenu";
             this.Text = "Sorteio Magnata";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -610,5 +634,7 @@ namespace SorteioMagnata
         private System.Windows.Forms.DataGridView Grid;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
