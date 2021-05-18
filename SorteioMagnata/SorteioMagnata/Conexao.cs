@@ -7,7 +7,7 @@ namespace SorteioMagnata
     {
 
         //CONEXÃO COM O BANCO DE DADOS LOCAL
-        string conex = "SERVER=localhost; DATABASE=sorteiomagnata; UID=root; PWD=6aeenel; PORT=3306;";
+        string conex = "SERVER=localhost; DATABASE=sorteiomagnata; UID=root; PWD=; PORT=3306;";
         public MySqlConnection con = null;
         public void AbrirCon()
         {
