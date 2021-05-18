@@ -84,9 +84,10 @@ namespace SorteioMagnata.Logica
             this.pnlNumeroSorteio.Controls.Add(this.txtNumero1);
             this.pnlNumeroSorteio.Controls.Add(this.txtNomeSorteio);
             this.pnlNumeroSorteio.Controls.Add(this.label1);
-            this.pnlNumeroSorteio.Location = new System.Drawing.Point(27, 12);
+            this.pnlNumeroSorteio.Location = new System.Drawing.Point(36, 15);
+            this.pnlNumeroSorteio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlNumeroSorteio.Name = "pnlNumeroSorteio";
-            this.pnlNumeroSorteio.Size = new System.Drawing.Size(517, 209);
+            this.pnlNumeroSorteio.Size = new System.Drawing.Size(689, 257);
             this.pnlNumeroSorteio.TabIndex = 0;
             // 
             // btnSalvarSorteio
@@ -97,9 +98,10 @@ namespace SorteioMagnata.Logica
             this.btnSalvarSorteio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvarSorteio.FlatAppearance.BorderSize = 0;
             this.btnSalvarSorteio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvarSorteio.Location = new System.Drawing.Point(426, 19);
+            this.btnSalvarSorteio.Location = new System.Drawing.Point(568, 23);
+            this.btnSalvarSorteio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalvarSorteio.Name = "btnSalvarSorteio";
-            this.btnSalvarSorteio.Size = new System.Drawing.Size(61, 62);
+            this.btnSalvarSorteio.Size = new System.Drawing.Size(81, 76);
             this.btnSalvarSorteio.TabIndex = 7;
             this.btnSalvarSorteio.UseVisualStyleBackColor = false;
             this.btnSalvarSorteio.Click += new System.EventHandler(this.btnSalvarSorteio_Click);
@@ -108,9 +110,10 @@ namespace SorteioMagnata.Logica
             // 
             this.txtNumero5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumero5.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero5.Location = new System.Drawing.Point(387, 87);
+            this.txtNumero5.Location = new System.Drawing.Point(516, 107);
+            this.txtNumero5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNumero5.Name = "txtNumero5";
-            this.txtNumero5.Size = new System.Drawing.Size(80, 80);
+            this.txtNumero5.Size = new System.Drawing.Size(106, 98);
             this.txtNumero5.TabIndex = 6;
             this.txtNumero5.TextChanged += new System.EventHandler(this.txtNumero1_TextChanged);
             // 
@@ -118,9 +121,10 @@ namespace SorteioMagnata.Logica
             // 
             this.txtNumero4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumero4.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero4.Location = new System.Drawing.Point(301, 87);
+            this.txtNumero4.Location = new System.Drawing.Point(401, 107);
+            this.txtNumero4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNumero4.Name = "txtNumero4";
-            this.txtNumero4.Size = new System.Drawing.Size(80, 80);
+            this.txtNumero4.Size = new System.Drawing.Size(106, 98);
             this.txtNumero4.TabIndex = 5;
             this.txtNumero4.TextChanged += new System.EventHandler(this.txtNumero1_TextChanged);
             // 
@@ -128,9 +132,10 @@ namespace SorteioMagnata.Logica
             // 
             this.txtNumero3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumero3.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero3.Location = new System.Drawing.Point(215, 87);
+            this.txtNumero3.Location = new System.Drawing.Point(287, 107);
+            this.txtNumero3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNumero3.Name = "txtNumero3";
-            this.txtNumero3.Size = new System.Drawing.Size(80, 80);
+            this.txtNumero3.Size = new System.Drawing.Size(106, 98);
             this.txtNumero3.TabIndex = 4;
             this.txtNumero3.TextChanged += new System.EventHandler(this.txtNumero1_TextChanged);
             // 
@@ -138,9 +143,10 @@ namespace SorteioMagnata.Logica
             // 
             this.txtNumero2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumero2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero2.Location = new System.Drawing.Point(129, 87);
+            this.txtNumero2.Location = new System.Drawing.Point(172, 107);
+            this.txtNumero2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNumero2.Name = "txtNumero2";
-            this.txtNumero2.Size = new System.Drawing.Size(80, 80);
+            this.txtNumero2.Size = new System.Drawing.Size(106, 98);
             this.txtNumero2.TabIndex = 3;
             this.txtNumero2.TextChanged += new System.EventHandler(this.txtNumero1_TextChanged);
             // 
@@ -148,10 +154,11 @@ namespace SorteioMagnata.Logica
             // 
             this.txtNumero1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumero1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero1.Location = new System.Drawing.Point(43, 87);
+            this.txtNumero1.Location = new System.Drawing.Point(57, 107);
+            this.txtNumero1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNumero1.MaxLength = 2;
             this.txtNumero1.Name = "txtNumero1";
-            this.txtNumero1.Size = new System.Drawing.Size(80, 80);
+            this.txtNumero1.Size = new System.Drawing.Size(106, 98);
             this.txtNumero1.TabIndex = 2;
             this.txtNumero1.TextChanged += new System.EventHandler(this.txtNumero1_TextChanged);
             // 
@@ -159,9 +166,10 @@ namespace SorteioMagnata.Logica
             // 
             this.txtNomeSorteio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomeSorteio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeSorteio.Location = new System.Drawing.Point(117, 39);
+            this.txtNomeSorteio.Location = new System.Drawing.Point(156, 48);
+            this.txtNomeSorteio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNomeSorteio.Name = "txtNomeSorteio";
-            this.txtNomeSorteio.Size = new System.Drawing.Size(285, 26);
+            this.txtNomeSorteio.Size = new System.Drawing.Size(379, 30);
             this.txtNomeSorteio.TabIndex = 1;
             this.txtNomeSorteio.TextChanged += new System.EventHandler(this.txtNomeSorteio_TextChanged);
             // 
@@ -169,9 +177,10 @@ namespace SorteioMagnata.Logica
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(113, 16);
+            this.label1.Location = new System.Drawing.Point(151, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 20);
+            this.label1.Size = new System.Drawing.Size(180, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome do Sorteio:";
             // 
@@ -179,7 +188,8 @@ namespace SorteioMagnata.Logica
             // 
             this.imgResultSorteio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.imgResultSorteio.Image = ((System.Drawing.Image)(resources.GetObject("imgResultSorteio.Image")));
-            this.imgResultSorteio.Location = new System.Drawing.Point(12, 227);
+            this.imgResultSorteio.Location = new System.Drawing.Point(16, 279);
+            this.imgResultSorteio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.imgResultSorteio.Name = "imgResultSorteio";
             this.imgResultSorteio.Size = new System.Drawing.Size(551, 407);
             this.imgResultSorteio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -197,9 +207,10 @@ namespace SorteioMagnata.Logica
             this.panel2.Controls.Add(this.Grid);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(13, 650);
+            this.panel2.Location = new System.Drawing.Point(17, 800);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(553, 780);
+            this.panel2.Size = new System.Drawing.Size(737, 960);
             this.panel2.TabIndex = 24;
             // 
             // label5
@@ -207,9 +218,10 @@ namespace SorteioMagnata.Logica
             this.label5.AutoSize = true;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(134, 71);
+            this.label5.Location = new System.Drawing.Point(179, 87);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(168, 18);
+            this.label5.Size = new System.Drawing.Size(209, 24);
             this.label5.TabIndex = 29;
             this.label5.Text = "Ordem de Pontuação";
             // 
@@ -218,9 +230,10 @@ namespace SorteioMagnata.Logica
             this.label4.AutoSize = true;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(134, 43);
+            this.label4.Location = new System.Drawing.Point(179, 53);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 24);
+            this.label4.Size = new System.Drawing.Size(84, 29);
             this.label4.TabIndex = 28;
             this.label4.Text = "LISTA";
             // 
@@ -231,9 +244,10 @@ namespace SorteioMagnata.Logica
             this.btnRelatorioLista.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRelatorioLista.FlatAppearance.BorderSize = 0;
             this.btnRelatorioLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRelatorioLista.Location = new System.Drawing.Point(484, 5);
+            this.btnRelatorioLista.Location = new System.Drawing.Point(645, 6);
+            this.btnRelatorioLista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRelatorioLista.Name = "btnRelatorioLista";
-            this.btnRelatorioLista.Size = new System.Drawing.Size(50, 50);
+            this.btnRelatorioLista.Size = new System.Drawing.Size(67, 62);
             this.btnRelatorioLista.TabIndex = 25;
             this.btnRelatorioLista.UseVisualStyleBackColor = false;
             this.btnRelatorioLista.Click += new System.EventHandler(this.btnRelatorioLista_Click);
@@ -242,9 +256,10 @@ namespace SorteioMagnata.Logica
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(4, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(5, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(124, 119);
+            this.pictureBox2.Size = new System.Drawing.Size(165, 146);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
@@ -257,10 +272,12 @@ namespace SorteioMagnata.Logica
             this.Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Grid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Grid.Location = new System.Drawing.Point(0, 128);
+            this.Grid.Location = new System.Drawing.Point(0, 158);
+            this.Grid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Grid.Name = "Grid";
             this.Grid.ReadOnly = true;
-            this.Grid.Size = new System.Drawing.Size(550, 646);
+            this.Grid.RowHeadersWidth = 51;
+            this.Grid.Size = new System.Drawing.Size(733, 795);
             this.Grid.TabIndex = 0;
             this.Grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
             // 
@@ -268,9 +285,10 @@ namespace SorteioMagnata.Logica
             // 
             this.label2.AutoSize = true;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Location = new System.Drawing.Point(132, 55);
+            this.label2.Location = new System.Drawing.Point(176, 68);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(415, 13);
+            this.label2.Size = new System.Drawing.Size(552, 17);
             this.label2.TabIndex = 26;
             this.label2.Text = "____________________________________________________________________";
             // 
@@ -278,9 +296,10 @@ namespace SorteioMagnata.Logica
             // 
             this.label3.AutoSize = true;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(132, 58);
+            this.label3.Location = new System.Drawing.Point(176, 71);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(415, 13);
+            this.label3.Size = new System.Drawing.Size(552, 17);
             this.label3.TabIndex = 27;
             this.label3.Text = "____________________________________________________________________";
             // 
@@ -291,9 +310,10 @@ namespace SorteioMagnata.Logica
             this.btnRelatorioIMG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRelatorioIMG.FlatAppearance.BorderSize = 0;
             this.btnRelatorioIMG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRelatorioIMG.Location = new System.Drawing.Point(513, 227);
+            this.btnRelatorioIMG.Location = new System.Drawing.Point(684, 279);
+            this.btnRelatorioIMG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRelatorioIMG.Name = "btnRelatorioIMG";
-            this.btnRelatorioIMG.Size = new System.Drawing.Size(50, 50);
+            this.btnRelatorioIMG.Size = new System.Drawing.Size(67, 62);
             this.btnRelatorioIMG.TabIndex = 26;
             this.btnRelatorioIMG.UseVisualStyleBackColor = false;
             this.btnRelatorioIMG.Click += new System.EventHandler(this.btnRelatorioIMG_Click);
@@ -304,9 +324,10 @@ namespace SorteioMagnata.Logica
             this.lblNomeSorteio.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblNomeSorteio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNomeSorteio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeSorteio.Location = new System.Drawing.Point(117, 356);
+            this.lblNomeSorteio.Location = new System.Drawing.Point(156, 438);
+            this.lblNomeSorteio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNomeSorteio.Name = "lblNomeSorteio";
-            this.lblNomeSorteio.Size = new System.Drawing.Size(0, 24);
+            this.lblNomeSorteio.Size = new System.Drawing.Size(0, 29);
             this.lblNomeSorteio.TabIndex = 27;
             // 
             // imgNumero5
@@ -314,9 +335,10 @@ namespace SorteioMagnata.Logica
             this.imgNumero5.BackColor = System.Drawing.Color.Gainsboro;
             this.imgNumero5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.imgNumero5.Image = ((System.Drawing.Image)(resources.GetObject("imgNumero5.Image")));
-            this.imgNumero5.Location = new System.Drawing.Point(423, 401);
+            this.imgNumero5.Location = new System.Drawing.Point(564, 494);
+            this.imgNumero5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.imgNumero5.Name = "imgNumero5";
-            this.imgNumero5.Size = new System.Drawing.Size(66, 66);
+            this.imgNumero5.Size = new System.Drawing.Size(88, 81);
             this.imgNumero5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgNumero5.TabIndex = 32;
             this.imgNumero5.TabStop = false;
@@ -326,9 +348,10 @@ namespace SorteioMagnata.Logica
             this.imgNumero4.BackColor = System.Drawing.Color.Gainsboro;
             this.imgNumero4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.imgNumero4.Image = ((System.Drawing.Image)(resources.GetObject("imgNumero4.Image")));
-            this.imgNumero4.Location = new System.Drawing.Point(338, 401);
+            this.imgNumero4.Location = new System.Drawing.Point(451, 494);
+            this.imgNumero4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.imgNumero4.Name = "imgNumero4";
-            this.imgNumero4.Size = new System.Drawing.Size(66, 66);
+            this.imgNumero4.Size = new System.Drawing.Size(88, 81);
             this.imgNumero4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgNumero4.TabIndex = 31;
             this.imgNumero4.TabStop = false;
@@ -338,9 +361,10 @@ namespace SorteioMagnata.Logica
             this.imgNumero3.BackColor = System.Drawing.Color.Gainsboro;
             this.imgNumero3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.imgNumero3.Image = ((System.Drawing.Image)(resources.GetObject("imgNumero3.Image")));
-            this.imgNumero3.Location = new System.Drawing.Point(253, 401);
+            this.imgNumero3.Location = new System.Drawing.Point(337, 494);
+            this.imgNumero3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.imgNumero3.Name = "imgNumero3";
-            this.imgNumero3.Size = new System.Drawing.Size(66, 66);
+            this.imgNumero3.Size = new System.Drawing.Size(88, 81);
             this.imgNumero3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgNumero3.TabIndex = 30;
             this.imgNumero3.TabStop = false;
@@ -350,9 +374,10 @@ namespace SorteioMagnata.Logica
             this.imgNumero2.BackColor = System.Drawing.Color.Gainsboro;
             this.imgNumero2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.imgNumero2.Image = ((System.Drawing.Image)(resources.GetObject("imgNumero2.Image")));
-            this.imgNumero2.Location = new System.Drawing.Point(168, 401);
+            this.imgNumero2.Location = new System.Drawing.Point(224, 494);
+            this.imgNumero2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.imgNumero2.Name = "imgNumero2";
-            this.imgNumero2.Size = new System.Drawing.Size(66, 66);
+            this.imgNumero2.Size = new System.Drawing.Size(88, 81);
             this.imgNumero2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgNumero2.TabIndex = 29;
             this.imgNumero2.TabStop = false;
@@ -362,9 +387,10 @@ namespace SorteioMagnata.Logica
             this.imgNumero1.BackColor = System.Drawing.Color.Gainsboro;
             this.imgNumero1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.imgNumero1.Image = ((System.Drawing.Image)(resources.GetObject("imgNumero1.Image")));
-            this.imgNumero1.Location = new System.Drawing.Point(83, 401);
+            this.imgNumero1.Location = new System.Drawing.Point(111, 494);
+            this.imgNumero1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.imgNumero1.Name = "imgNumero1";
-            this.imgNumero1.Size = new System.Drawing.Size(66, 66);
+            this.imgNumero1.Size = new System.Drawing.Size(88, 81);
             this.imgNumero1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgNumero1.TabIndex = 28;
             this.imgNumero1.TabStop = false;
@@ -376,9 +402,10 @@ namespace SorteioMagnata.Logica
             this.lblNumero1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNumero1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumero1.ForeColor = System.Drawing.Color.White;
-            this.lblNumero1.Location = new System.Drawing.Point(100, 422);
+            this.lblNumero1.Location = new System.Drawing.Point(133, 519);
+            this.lblNumero1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumero1.Name = "lblNumero1";
-            this.lblNumero1.Size = new System.Drawing.Size(32, 24);
+            this.lblNumero1.Size = new System.Drawing.Size(41, 29);
             this.lblNumero1.TabIndex = 33;
             this.lblNumero1.Text = "00";
             // 
@@ -389,9 +416,10 @@ namespace SorteioMagnata.Logica
             this.lblNumero2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNumero2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumero2.ForeColor = System.Drawing.Color.White;
-            this.lblNumero2.Location = new System.Drawing.Point(185, 422);
+            this.lblNumero2.Location = new System.Drawing.Point(247, 519);
+            this.lblNumero2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumero2.Name = "lblNumero2";
-            this.lblNumero2.Size = new System.Drawing.Size(32, 24);
+            this.lblNumero2.Size = new System.Drawing.Size(41, 29);
             this.lblNumero2.TabIndex = 34;
             this.lblNumero2.Text = "00";
             // 
@@ -402,9 +430,10 @@ namespace SorteioMagnata.Logica
             this.lblNumero3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNumero3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumero3.ForeColor = System.Drawing.Color.White;
-            this.lblNumero3.Location = new System.Drawing.Point(270, 422);
+            this.lblNumero3.Location = new System.Drawing.Point(360, 519);
+            this.lblNumero3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumero3.Name = "lblNumero3";
-            this.lblNumero3.Size = new System.Drawing.Size(32, 24);
+            this.lblNumero3.Size = new System.Drawing.Size(41, 29);
             this.lblNumero3.TabIndex = 35;
             this.lblNumero3.Text = "00";
             // 
@@ -415,9 +444,10 @@ namespace SorteioMagnata.Logica
             this.lblNumero4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNumero4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumero4.ForeColor = System.Drawing.Color.White;
-            this.lblNumero4.Location = new System.Drawing.Point(355, 422);
+            this.lblNumero4.Location = new System.Drawing.Point(473, 519);
+            this.lblNumero4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumero4.Name = "lblNumero4";
-            this.lblNumero4.Size = new System.Drawing.Size(32, 24);
+            this.lblNumero4.Size = new System.Drawing.Size(41, 29);
             this.lblNumero4.TabIndex = 36;
             this.lblNumero4.Text = "00";
             // 
@@ -428,19 +458,20 @@ namespace SorteioMagnata.Logica
             this.lblNumero5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNumero5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumero5.ForeColor = System.Drawing.Color.White;
-            this.lblNumero5.Location = new System.Drawing.Point(440, 422);
+            this.lblNumero5.Location = new System.Drawing.Point(587, 519);
+            this.lblNumero5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumero5.Name = "lblNumero5";
-            this.lblNumero5.Size = new System.Drawing.Size(32, 24);
+            this.lblNumero5.Size = new System.Drawing.Size(41, 29);
             this.lblNumero5.TabIndex = 37;
             this.lblNumero5.Text = "00";
             // 
             // FrmSorteios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(599, 761);
+            this.ClientSize = new System.Drawing.Size(820, 937);
             this.Controls.Add(this.lblNumero5);
             this.Controls.Add(this.lblNumero4);
             this.Controls.Add(this.lblNumero3);
@@ -458,10 +489,12 @@ namespace SorteioMagnata.Logica
             this.Controls.Add(this.pnlNumeroSorteio);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "FrmSorteios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela de Sorteio";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSorteios_FormClosing);
             this.Load += new System.EventHandler(this.FrmSorteios_Load);
             this.pnlNumeroSorteio.ResumeLayout(false);
             this.pnlNumeroSorteio.PerformLayout();

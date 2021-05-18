@@ -138,7 +138,9 @@ namespace SorteioMagnata.Logica
                 "WHERE idApostador=@idapostador";
             cmd = new MySqlCommand(sql, con.con);
 
-            cmd.Parameters.AddWithValue("@idapostador", cb_Apostadores.SelectedValue);
+            DataGridViewRow dgv = GridEditAposta.Rows[1];
+
+            cmd.Parameters.AddWithValue("@idapostador", cb_Apostadores.Text);
             cmd.Parameters.AddWithValue("@numeroaposta1", txtNumeroAposta1.Text.PadLeft(2, '0'));
             cmd.Parameters.AddWithValue("@numeroaposta2", txtNumeroAposta2.Text.PadLeft(2, '0'));
             cmd.Parameters.AddWithValue("@numeroaposta3", txtNumeroAposta3.Text.PadLeft(2, '0'));

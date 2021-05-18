@@ -78,3 +78,4 @@ C:\Users\Mineiro\Source\Repos\Sorteio\SorteioMagnata\SorteioMagnata\obj\Debug\So
 C:\Users\Mineiro\Source\Repos\Sorteio\SorteioMagnata\SorteioMagnata\obj\Debug\SorteioMagnata.pdb
 C:\Users\Mineiro\Source\Repos\Sorteio\SorteioMagnata\SorteioMagnata\obj\Debug\SorteioMagnata.csprojAssemblyReference.cache
 C:\Users\Mineiro\Source\Repos\Sorteio\SorteioMagnata\SorteioMagnata\obj\Debug\SorteioMagnata.Logica.EditarAposta.resources
+C:\Users\omar_\source\repos\omarabdul85\Sorteio-main\Mineirin\Sorteio\SorteioMagnata\SorteioMagnata\obj\Debug\SorteioMagnata.Logica.EditarAposta.resources

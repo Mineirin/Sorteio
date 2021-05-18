@@ -374,7 +374,89 @@ namespace SorteioMagnata.Logica
 
             Grid.DataSource = dt;
             FormatarDGApostas();
+            PintarNumerosSorteados();
             con.FecharCon();
+        }
+
+        private void PintarNumerosSorteados()
+        {
+            con.AbrirCon();
+            //Grid.DataSource = null;
+            sql = "SELECT nomecartela as 'Cartela', " +
+                "aposta1flag, " +
+                "numeroaposta1 as n1, " +
+                "aposta2flag, " +
+                "numeroaposta2 as n2, " +
+                "aposta3flag, " +
+                "numeroaposta3 as n3, " +
+                "aposta4flag, " +
+                "numeroaposta4 as n4, " +
+                "aposta5flag, " +
+                "numeroaposta5 as n5, " +
+                "aposta6flag, " +
+                "numeroaposta6 as n6, " +
+                "aposta7flag, " +
+                "numeroaposta7 as n7, " +
+                "aposta8flag, " +
+                "numeroaposta8 as n8, " +
+                "aposta9flag, " +
+                "numeroaposta9 as n9, " +
+                "aposta10flag, " +
+                "numeroaposta10 as n10 " +
+                //"acertos, " +
+                //"data " +
+                "FROM apostas order by acertos desc";
+            cmd = new MySqlCommand(sql, con.con);
+            MySqlDataAdapter da2 = new MySqlDataAdapter();
+            da2.SelectCommand = cmd;
+            DataTable dt2 = new DataTable();
+            da2.Fill(dt2);
+
+            for (int i = 0; i < dt2.Rows.Count; i++)
+            {
+                var flag1 = dt2.Rows[i][1].ToString();
+                var numero1 = dt2.Rows[i][2].ToString();
+                var flag2 = dt2.Rows[i][3].ToString();
+                var numero2 = dt2.Rows[i][4].ToString();
+                var flag3 = dt2.Rows[i][5].ToString();
+                var numero3 = dt2.Rows[i][6].ToString();
+                var flag4 = dt2.Rows[i][7].ToString();
+                var numero4 = dt2.Rows[i][8].ToString();
+                var flag5 = dt2.Rows[i][9].ToString();
+                var numero5 = dt2.Rows[i][10].ToString();
+                var flag6 = dt2.Rows[i][11].ToString();
+                var numero6 = dt2.Rows[i][12].ToString();
+                var flag7 = dt2.Rows[i][13].ToString();
+                var numero7 = dt2.Rows[i][14].ToString();
+                var flag8 = dt2.Rows[i][15].ToString();
+                var numero8 = dt2.Rows[i][16].ToString();
+                var flag9 = dt2.Rows[i][17].ToString();
+                var numero9 = dt2.Rows[i][18].ToString();
+                var flag10 = dt2.Rows[i][19].ToString();
+                var numero10 = dt2.Rows[i][20].ToString();
+
+                if (flag1 == "True")
+                    Grid.Rows[i].Cells[1].Style.BackColor = Color.Yellow;
+                if (flag2 == "True")
+                    Grid.Rows[i].Cells[2].Style.BackColor = Color.Yellow;
+                if (flag3 == "True")
+                    Grid.Rows[i].Cells[3].Style.BackColor = Color.Yellow;
+                if (flag4 == "True")
+                    Grid.Rows[i].Cells[4].Style.BackColor = Color.Yellow;
+                if (flag5 == "True")
+                    Grid.Rows[i].Cells[5].Style.BackColor = Color.Yellow;
+                if (flag6 == "True")
+                    Grid.Rows[i].Cells[6].Style.BackColor = Color.Yellow;
+                if (flag7 == "True")
+                    Grid.Rows[i].Cells[7].Style.BackColor = Color.Yellow;
+                if (flag8 == "True")
+                    Grid.Rows[i].Cells[8].Style.BackColor = Color.Yellow;
+                if (flag9 == "True")
+                    Grid.Rows[i].Cells[9].Style.BackColor = Color.Yellow;
+                if (flag10 == "True")
+                    Grid.Rows[i].Cells[10].Style.BackColor = Color.Yellow;
+
+            }
         }
 
         private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -406,6 +488,11 @@ namespace SorteioMagnata.Logica
             Bitmap bitmap = DrawControlToBitmap(panel2);
             bitmap.Save("panel2.bmp");
             System.Diagnostics.Process.Start("panel2.bmp");
+        }
+
+        private void FrmSorteios_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            PintarNumerosSorteados();
         }
     }
 }
