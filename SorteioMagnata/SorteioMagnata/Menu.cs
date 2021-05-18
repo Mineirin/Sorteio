@@ -90,6 +90,7 @@ namespace SorteioMagnata
             form.Show();
         }
 
+
         private void pnlMenu_Paint(object sender, PaintEventArgs e)
         {
             pnlMenu.Location = new Point(this.Width / 2 - 480, this.Height / 2 - 350);
@@ -140,6 +141,7 @@ namespace SorteioMagnata
         {
             lblUsuario.Text = Program.nomeUsuario;
             lblCargo.Text = Program.cargoUsuario;
+            
         }
         private void FormatarDGPadrao()
         {
@@ -178,7 +180,6 @@ namespace SorteioMagnata
             Grid.Columns[10].Width = 45;
             Grid.Columns[11].Width = 60;
             Grid.Columns[12].Width = 80;
-
         }
 
         private void FormatarDGSorteios()
@@ -232,6 +233,19 @@ namespace SorteioMagnata
             FormatarDGPadrao();
             con.FecharCon();
             FormatarDG();
+
+            #region Contagem Apostadores
+            sql = "SELECT COUNT(ID) as id FROM apostadores";
+            cmd = new MySqlCommand(sql, con.con);
+            MySqlDataAdapter da1 = new MySqlDataAdapter();
+            da1.SelectCommand = cmd;
+
+            DataTable dt1 = new DataTable();
+            da1.Fill(dt1);
+
+            string rowCount1 = dt1.Rows[0]["id"].ToString();
+            lbl_Apostadores.Text = rowCount1;
+            #endregion Contagem Apostadores
         }
 
         private void btnCambistas_Click(object sender, EventArgs e)
@@ -250,6 +264,19 @@ namespace SorteioMagnata
             FormatarDGPadrao();
             con.FecharCon();
             FormatarDG();
+
+            #region Contagem Cambistas
+            sql = "SELECT COUNT(ID) as id FROM cambistas";
+            cmd = new MySqlCommand(sql, con.con);
+            MySqlDataAdapter da2 = new MySqlDataAdapter();
+            da2.SelectCommand = cmd;
+
+            DataTable dt2 = new DataTable();
+            da2.Fill(dt2);
+
+            string rowCount2 = dt2.Rows[0]["ID"].ToString();
+            lbl_Cambistas.Text = rowCount2;
+            #endregion Contagem Cambistas
         }
 
         private void btnApostas_Click(object sender, EventArgs e)
@@ -284,6 +311,24 @@ namespace SorteioMagnata
             FormatarDGApostas();
             PintarNumerosSorteados();
             con.FecharCon();
+            DataGridViewCheckBoxColumn dgvCmb = new DataGridViewCheckBoxColumn();
+            dgvCmb.ValueType = typeof(bool);
+            dgvCmb.Name = "Chk";
+            dgvCmb.HeaderText = "Todos";
+            Grid.Columns.Add(dgvCmb);
+           
+            #region Contagem Apostas
+            sql = "SELECT COUNT(ID) as id FROM apostas";
+            cmd = new MySqlCommand(sql, con.con);
+            MySqlDataAdapter da3 = new MySqlDataAdapter();
+            da3.SelectCommand = cmd;
+
+            DataTable dt3 = new DataTable();
+            da3.Fill(dt3);
+
+            string rowCount3 = dt3.Rows[0]["id"].ToString();
+            lbl_Apostas.Text = rowCount3;
+            #endregion Contagem Apostas
         }
 
         private void PintarNumerosSorteados()
@@ -389,6 +434,19 @@ namespace SorteioMagnata
             Grid.DataSource = dt;
             FormatarDGSorteios();
             con.FecharCon();
+
+            #region Contagem Sorteios
+            sql = "SELECT COUNT(ID) as id FROM resultsorteio";
+            cmd = new MySqlCommand(sql, con.con);
+            MySqlDataAdapter da4 = new MySqlDataAdapter();
+            da4.SelectCommand = cmd;
+
+            DataTable dt4 = new DataTable();
+            da4.Fill(dt4);
+
+            string rowCount4 = dt4.Rows[0]["id"].ToString();
+            lbl_Sorteios.Text = rowCount4;
+            #endregion Contagem Sorteios
         }
 
         private void FrmMenu_FormClosed(object sender, FormClosedEventArgs e)
@@ -400,12 +458,24 @@ namespace SorteioMagnata
         {
             btnEditar.Enabled = true;
             btnExcluir.Enabled = true;
+
+            List<int> listaExclusao = new List<int>();
+            for (int i = 0; i < 10; i++)
+            {
+                listaExclusao.Add(i);
+            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             Logica.EditarAposta form = new Logica.EditarAposta();
             form.Show();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            string txt = "";
+            if()
         }
     }
 }
