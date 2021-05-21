@@ -79,10 +79,6 @@ namespace SorteioMagnata.Logica
 
         }
 
-        private void FrmApostas_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnSalvarSorteio_Click(object sender, EventArgs e)
         {

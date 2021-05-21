@@ -331,7 +331,6 @@ namespace SorteioMagnata.Logica
             this.Name = "FrmApostas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Apostas";
-            this.Load += new System.EventHandler(this.FrmApostas_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

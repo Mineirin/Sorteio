@@ -54,7 +54,6 @@ namespace SorteioMagnata
             this.btnCambistas = new System.Windows.Forms.Button();
             this.btnApostadores = new System.Windows.Forms.Button();
             this.pnlMenuGrid = new System.Windows.Forms.Panel();
-            this.Grid = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -67,14 +66,10 @@ namespace SorteioMagnata
             this.label12 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuTopo.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.pnlMenuGrid.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -297,7 +292,7 @@ namespace SorteioMagnata
             this.btnSorteios.Text = "SORTEIOS";
             this.btnSorteios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSorteios.UseVisualStyleBackColor = true;
-            this.btnSorteios.Click += new System.EventHandler(this.btnSorteios_Click);
+            //this.btnSorteios.Click += new System.EventHandler(this.btnSorteios_Click);
             // 
             // btnApostas
             // 
@@ -352,11 +347,7 @@ namespace SorteioMagnata
             // pnlMenuGrid
             // 
             this.pnlMenuGrid.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlMenuGrid.Controls.Add(this.label2);
-            this.pnlMenuGrid.Controls.Add(this.label1);
-            this.pnlMenuGrid.Controls.Add(this.btnEditar);
-            this.pnlMenuGrid.Controls.Add(this.btnExcluir);
-            this.pnlMenuGrid.Controls.Add(this.Grid);
+            this.pnlMenuGrid.Controls.Add(this.panel1);
             this.pnlMenuGrid.Controls.Add(this.label13);
             this.pnlMenuGrid.Controls.Add(this.txtBuscar);
             this.pnlMenuGrid.Controls.Add(this.label7);
@@ -370,22 +361,6 @@ namespace SorteioMagnata
             this.pnlMenuGrid.Size = new System.Drawing.Size(911, 688);
             this.pnlMenuGrid.TabIndex = 2;
             this.pnlMenuGrid.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMenuGrid_Paint);
-            // 
-            // Grid
-            // 
-            this.Grid.AllowUserToAddRows = false;
-            this.Grid.AllowUserToDeleteRows = false;
-            this.Grid.BackgroundColor = System.Drawing.Color.White;
-            this.Grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Grid.Location = new System.Drawing.Point(0, 62);
-            this.Grid.Name = "Grid";
-            this.Grid.ReadOnly = true;
-            this.Grid.Size = new System.Drawing.Size(807, 623);
-            this.Grid.TabIndex = 16;
-            this.Grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
             // 
             // label13
             // 
@@ -469,10 +444,10 @@ namespace SorteioMagnata
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(2, 46);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(910, 13);
+            this.label10.Size = new System.Drawing.Size(903, 13);
             this.label10.TabIndex = 6;
             this.label10.Text = "_________________________________________________________________________________" +
-    "________________________________________________";
+    "_______________________________________________";
             // 
             // lblCargo
             // 
@@ -512,49 +487,12 @@ namespace SorteioMagnata
             this.label11.TabIndex = 7;
             this.label11.Text = "Nome:";
             // 
-            // btnExcluir
+            // panel1
             // 
-            this.btnExcluir.Enabled = false;
-            this.btnExcluir.FlatAppearance.BorderSize = 0;
-            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
-            this.btnExcluir.Location = new System.Drawing.Point(815, 158);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(67, 67);
-            this.btnExcluir.TabIndex = 18;
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Enabled = false;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.Location = new System.Drawing.Point(813, 62);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(67, 67);
-            this.btnEditar.TabIndex = 17;
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(812, 129);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 13);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Editar Apostas";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(812, 228);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Excluir Apostas";
+            this.panel1.Location = new System.Drawing.Point(2, 62);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(909, 622);
+            this.panel1.TabIndex = 16;
             // 
             // FrmMenu
             // 
@@ -586,7 +524,6 @@ namespace SorteioMagnata
             this.pnlMenu.PerformLayout();
             this.pnlMenuGrid.ResumeLayout(false);
             this.pnlMenuGrid.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -631,10 +568,6 @@ namespace SorteioMagnata
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.DataGridView Grid;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

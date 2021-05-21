@@ -494,5 +494,55 @@ namespace SorteioMagnata.Logica
         {
             PintarNumerosSorteados();
         }
+
+        private void imgNumero1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imgNumero2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNumero3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNumero4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imgResultSorteio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNumero5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNumero2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNumero1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imgNumero3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imgNumero4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
