@@ -29,7 +29,7 @@ namespace SorteioMagnata
 
             con.AbrirCon();
             dgvApostas.DataSource = null;
-            sql = "SELECT nomecartela as 'Cartela', " +
+            sql = "SELECT id as 'idApostas', nomecartela as 'Cartela', " +
                 "numeroaposta1 as n1, " +
                 "numeroaposta2 as n2, " +
                 "numeroaposta3 as n3, " +
@@ -57,71 +57,86 @@ namespace SorteioMagnata
 
         private void dgvApostas_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
+            dgvApostas.Columns["acertos"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             foreach (DataGridViewColumn coluna in dgvApostas.Columns)
             {
                 switch (coluna.Name)
                 {
-                    case "id":
+                    case "idApostas":
+                        coluna.DisplayIndex = 0;
                         coluna.Visible = false;
                         break;
                     case "Cartela":
+                        coluna.DisplayIndex = 1;
                         coluna.Width = 280;
                         coluna.HeaderText = "Participantes";
                         break;
                     case "n1":
+                        coluna.DisplayIndex = 2;
                         coluna.Width = 30;
                         coluna.HeaderText = "";
                         break;
                     case "n2":
+                        coluna.DisplayIndex = 3;
                         coluna.Width = 30;
                         coluna.HeaderText = "";
                         break;
                     case "n3":
+                        coluna.DisplayIndex = 4;
                         coluna.Width = 30;
                         coluna.HeaderText = "";
                         break;
                     case "n4":
+                        coluna.DisplayIndex = 5;
                         coluna.Width = 30;
                         coluna.HeaderText = "";
                         break;
                     case "n5":
+                        coluna.DisplayIndex = 6;
                         coluna.Width = 30;
                         coluna.HeaderText = "";
                         break;
                     case "n6":
+                        coluna.DisplayIndex = 7;
                         coluna.Width = 30;
                         coluna.HeaderText = "";
                         break;
                     case "n7":
+                        coluna.DisplayIndex = 8;
                         coluna.Width = 30;
                         coluna.HeaderText = "";
                         break;
                     case "n8":
+                        coluna.DisplayIndex = 9;
                         coluna.Width = 30;
                         coluna.HeaderText = "";
                         break;
                     case "n9":
+                        coluna.DisplayIndex = 10;
                         coluna.Width = 30;
                         coluna.HeaderText = "";
                         break;
                     case "n10":
+                        coluna.DisplayIndex = 11;
                         coluna.Width = 30;
                         coluna.HeaderText = "";
                         break;
                     case "acertos":
+                        coluna.DisplayIndex = 12;
                         coluna.Width = 75;
                         coluna.HeaderText = "Acertos";
                         break;
                     case "data":
+                        coluna.DisplayIndex = 13;
                         coluna.Width = 80;
                         coluna.HeaderText = "Data";
                         break;
                     case "editar":
-                        coluna.DisplayIndex = 13;
+                        coluna.DisplayIndex = 14;
                         coluna.Width = 30;
                         break;
                     case "excluir":
-                        coluna.DisplayIndex = 14;
+                        coluna.DisplayIndex = 15;
                         coluna.Width = 30;
                         break;
                     default:
@@ -138,13 +153,11 @@ namespace SorteioMagnata
 
         private void dgvApostas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-
-            idAposta = Convert.ToInt32(dgvApostas.Rows[e.RowIndex].Cells["id"].Value.ToString());
+            idAposta = Convert.ToInt32(dgvApostas.Rows[e.RowIndex].Cells["idApostas"].Value.ToString());
             if (dgvApostas.Columns[e.ColumnIndex] == dgvApostas.Columns["editar"])
             {
                 lbNome.Visible = true;
-                txtNome.Enabled = true;
+                txtNome.Enabled = false;
                 txtNome.Visible = true;
                 btnSalvar.Enabled = true;
                 btnSalvar.Visible = true;
@@ -152,7 +165,7 @@ namespace SorteioMagnata
                 btnFechar.Visible = true;
                 btnAleatorio.Enabled = true;
                 btnAleatorio.Visible = true;
-                
+
                 txtNumeroAposta1.Enabled = true;
                 txtNumeroAposta2.Enabled = true;
                 txtNumeroAposta3.Enabled = true;
@@ -175,16 +188,19 @@ namespace SorteioMagnata
                 txtNumeroAposta9.Visible = true;
                 txtNumeroAposta10.Visible = true;
 
-                txtNumeroAposta1.Text = dgvApostas.CurrentRow.Cells[3].Value.ToString();
-                txtNumeroAposta2.Text = dgvApostas.CurrentRow.Cells[4].Value.ToString();
-                txtNumeroAposta3.Text = dgvApostas.CurrentRow.Cells[5].Value.ToString();
-                txtNumeroAposta4.Text = dgvApostas.CurrentRow.Cells[6].Value.ToString();
-                txtNumeroAposta5.Text = dgvApostas.CurrentRow.Cells[7].Value.ToString();
-                txtNumeroAposta6.Text = dgvApostas.CurrentRow.Cells[8].Value.ToString();
-                txtNumeroAposta7.Text = dgvApostas.CurrentRow.Cells[9].Value.ToString();
-                txtNumeroAposta8.Text = dgvApostas.CurrentRow.Cells[10].Value.ToString();
-                txtNumeroAposta9.Text = dgvApostas.CurrentRow.Cells[11].Value.ToString();
-                txtNumeroAposta10.Text = dgvApostas.CurrentRow.Cells[12].Value.ToString();
+                txtNome.Text = dgvApostas.CurrentRow.Cells[3].Value.ToString();
+                txtNumeroAposta1.Text = dgvApostas.CurrentRow.Cells[4].Value.ToString();
+                txtNumeroAposta2.Text = dgvApostas.CurrentRow.Cells[5].Value.ToString();
+                txtNumeroAposta3.Text = dgvApostas.CurrentRow.Cells[6].Value.ToString();
+                txtNumeroAposta4.Text = dgvApostas.CurrentRow.Cells[7].Value.ToString();
+                txtNumeroAposta5.Text = dgvApostas.CurrentRow.Cells[8].Value.ToString();
+                txtNumeroAposta6.Text = dgvApostas.CurrentRow.Cells[9].Value.ToString();
+                txtNumeroAposta7.Text = dgvApostas.CurrentRow.Cells[10].Value.ToString();
+                txtNumeroAposta8.Text = dgvApostas.CurrentRow.Cells[11].Value.ToString();
+                txtNumeroAposta9.Text = dgvApostas.CurrentRow.Cells[12].Value.ToString();
+                txtNumeroAposta10.Text = dgvApostas.CurrentRow.Cells[13].Value.ToString();
+                con.AbrirCon();
+                
             }
             else if (dgvApostas.Columns[e.ColumnIndex] == dgvApostas.Columns["excluir"])
             {
@@ -200,7 +216,7 @@ namespace SorteioMagnata
                     con.FecharCon();
 
                     MessageBox.Show("Registro Excluído com Sucesso!", "Registro Excluído", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+
                 }
             }
             Listar();
@@ -238,6 +254,32 @@ namespace SorteioMagnata
             txtNumeroAposta8.Visible = false;
             txtNumeroAposta9.Visible = false;
             txtNumeroAposta10.Visible = false;
+            con.AbrirCon();
+            dgvApostas.DataSource = null;
+            sql = "SELECT id as 'idApostas', nomecartela as 'Cartela', " +
+                "numeroaposta1 as n1, " +
+                "numeroaposta2 as n2, " +
+                "numeroaposta3 as n3, " +
+                "numeroaposta4 as n4, " +
+                "numeroaposta5 as n5, " +
+                "numeroaposta6 as n6, " +
+                "numeroaposta7 as n7, " +
+                "numeroaposta8 as n8, " +
+                "numeroaposta9 as n9, " +
+                "numeroaposta10 as n10, " +
+                "acertos, " +
+                "data " +
+                "FROM apostas order by acertos desc";
+            cmd = new MySqlCommand(sql, con.con);
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            da.SelectCommand = cmd;
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            dgvApostas.DataSource = dt;
+            PintarNumerosSorteados();
+            con.FecharCon();
         }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -254,12 +296,12 @@ namespace SorteioMagnata
                 "numeroaposta8=@numeroaposta8," +
                 "numeroaposta9=@numeroaposta9," +
                 "numeroaposta10=@numeroaposta10 " +
-                "WHERE idApostador=@idapostador";
+                "WHERE id=@id";
             cmd = new MySqlCommand(sql, con.con);
 
             DataGridViewRow dgv = dgvApostas.Rows[1];
 
-            cmd.Parameters.AddWithValue("@idapostador", txtNome.Text);
+            
             cmd.Parameters.AddWithValue("@numeroaposta1", txtNumeroAposta1.Text.PadLeft(2, '0'));
             cmd.Parameters.AddWithValue("@numeroaposta2", txtNumeroAposta2.Text.PadLeft(2, '0'));
             cmd.Parameters.AddWithValue("@numeroaposta3", txtNumeroAposta3.Text.PadLeft(2, '0'));
@@ -287,7 +329,7 @@ namespace SorteioMagnata
         {
             con.AbrirCon();
             dgvApostas.DataSource = null;
-            sql = "SELECT id, nomecartela as 'Cartela', " +
+            sql = "SELECT id as 'idApostas', nomecartela as 'Cartela', " +
                 "numeroaposta1 as n1, " +
                 "numeroaposta2 as n2, " +
                 "numeroaposta3 as n3, " +
@@ -369,25 +411,25 @@ namespace SorteioMagnata
                 var numero10 = dt2.Rows[i][20].ToString();
 
                 if (flag1 == "True")
-                    dgvApostas.Rows[i].Cells[3].Style.BackColor = Color.Yellow;
-                if (flag2 == "True")
                     dgvApostas.Rows[i].Cells[4].Style.BackColor = Color.Yellow;
-                if (flag3 == "True")
+                if (flag2 == "True")
                     dgvApostas.Rows[i].Cells[5].Style.BackColor = Color.Yellow;
-                if (flag4 == "True")
+                if (flag3 == "True")
                     dgvApostas.Rows[i].Cells[6].Style.BackColor = Color.Yellow;
-                if (flag5 == "True")
+                if (flag4 == "True")
                     dgvApostas.Rows[i].Cells[7].Style.BackColor = Color.Yellow;
-                if (flag6 == "True")
+                if (flag5 == "True")
                     dgvApostas.Rows[i].Cells[8].Style.BackColor = Color.Yellow;
-                if (flag7 == "True")
+                if (flag6 == "True")
                     dgvApostas.Rows[i].Cells[9].Style.BackColor = Color.Yellow;
-                if (flag8 == "True")
+                if (flag7 == "True")
                     dgvApostas.Rows[i].Cells[10].Style.BackColor = Color.Yellow;
-                if (flag9 == "True")
+                if (flag8 == "True")
                     dgvApostas.Rows[i].Cells[11].Style.BackColor = Color.Yellow;
-                if (flag10 == "True")
+                if (flag9 == "True")
                     dgvApostas.Rows[i].Cells[12].Style.BackColor = Color.Yellow;
+                if (flag10 == "True")
+                    dgvApostas.Rows[i].Cells[13].Style.BackColor = Color.Yellow;
 
             }
         }

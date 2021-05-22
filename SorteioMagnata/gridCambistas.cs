@@ -105,7 +105,7 @@ namespace SorteioMagnata
                 {
                     //CODIGO DO BOTÃO DE EXCLUIR
                     con.AbrirCon();
-                    sql = "DELETE FROM apostadores WHERE id = @id";
+                    sql = "DELETE FROM cambistas WHERE id = @id";
                     cmd = new MySqlCommand(sql, con.con);
                     cmd.Parameters.AddWithValue("@id", idCamb);
                     cmd.ExecuteNonQuery();

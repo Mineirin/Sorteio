@@ -134,12 +134,6 @@
     <Compile Include="Logica\Apostas.Designer.cs">
       <DependentUpon>Apostas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Logica\EditarAposta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Logica\EditarAposta.Designer.cs">
-      <DependentUpon>EditarAposta.cs</DependentUpon>
-    </Compile>
     <Compile Include="Logica\Sorteios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,9 +177,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Logica\Apostas.resx">
       <DependentUpon>Apostas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Logica\EditarAposta.resx">
-      <DependentUpon>EditarAposta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Logica\Sorteios.resx">
       <DependentUpon>Sorteios.cs</DependentUpon>

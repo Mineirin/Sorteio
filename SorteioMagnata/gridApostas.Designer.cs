@@ -117,6 +117,7 @@ namespace SorteioMagnata
             this.btnFechar.TabIndex = 37;
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Visible = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // btnSalvar
             // 
@@ -130,6 +131,7 @@ namespace SorteioMagnata
             this.btnSalvar.TabIndex = 36;
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Visible = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // lbNome
             // 
@@ -156,6 +158,7 @@ namespace SorteioMagnata
             this.btnAleatorio.TabIndex = 48;
             this.btnAleatorio.UseVisualStyleBackColor = false;
             this.btnAleatorio.Visible = false;
+            this.btnAleatorio.Click += new System.EventHandler(this.btnAleatorio_Click);
             // 
             // txtNumeroAposta10
             // 
@@ -268,6 +271,7 @@ namespace SorteioMagnata
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(222, 26);
             this.txtNome.TabIndex = 49;
+            this.txtNome.Visible = false;
             // 
             // gridApostas
             // 
