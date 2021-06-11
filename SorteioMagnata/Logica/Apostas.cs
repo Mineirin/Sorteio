@@ -241,7 +241,8 @@ namespace SorteioMagnata.Logica
             Grid.Columns[9].HeaderText = "";
             Grid.Columns[10].HeaderText = "";
             Grid.Columns[11].HeaderText = "Acertos";
-            Grid.Columns[12].HeaderText = "Data";
+            Grid.Columns[12].HeaderText = "Status";
+            Grid.Columns[13].HeaderText = "Data";
 
             Grid.Columns[0].Width = 100;
             Grid.Columns[1].Width = 25;
@@ -255,7 +256,9 @@ namespace SorteioMagnata.Logica
             Grid.Columns[9].Width = 25;
             Grid.Columns[10].Width = 35;
             Grid.Columns[11].Visible = false;
-            Grid.Columns[12].Width = 100;
+            Grid.Columns[12].Width = 80;
+            Grid.Columns[13].Width = 100;
+
         }
 
         private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -290,6 +293,9 @@ namespace SorteioMagnata.Logica
             Listar();
         }
 
+        private void FrmApostas_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -144,6 +144,11 @@ namespace SorteioMagnata.Logica
                 }
 
                 int acertosTotais = acertosAnterior + acertosAtual;
+                if(acertosTotais == 10)
+                {
+                    btnReset.Visible = true;
+                    btnReset.Enabled = true;
+                }
                 if (acertosTotais ==11)
                 {
                    

@@ -438,25 +438,25 @@ namespace SorteioMagnata
                 var numero10 = dt2.Rows[i][20].ToString();
 
                 if (flag1 == "True")
-                    dgvApostas.Rows[i].Cells[5].Style.BackColor = Color.Yellow;
+                    dgvApostas.Rows[i].Cells[4].Style.BackColor = Color.Yellow;
                 if (flag2 == "True")
-                    dgvApostas.Rows[i].Cells[6].Style.BackColor = Color.Yellow;
+                    dgvApostas.Rows[i].Cells[5].Style.BackColor = Color.Yellow;
                 if (flag3 == "True")
-                    dgvApostas.Rows[i].Cells[7].Style.BackColor = Color.Yellow;
+                    dgvApostas.Rows[i].Cells[6].Style.BackColor = Color.Yellow;
                 if (flag4 == "True")
-                    dgvApostas.Rows[i].Cells[8].Style.BackColor = Color.Yellow;
+                    dgvApostas.Rows[i].Cells[7].Style.BackColor = Color.Yellow;
                 if (flag5 == "True")
-                    dgvApostas.Rows[i].Cells[9].Style.BackColor = Color.Yellow;
+                    dgvApostas.Rows[i].Cells[8].Style.BackColor = Color.Yellow;
                 if (flag6 == "True")
-                    dgvApostas.Rows[i].Cells[10].Style.BackColor = Color.Yellow;
+                    dgvApostas.Rows[i].Cells[9].Style.BackColor = Color.Yellow;
                 if (flag7 == "True")
-                    dgvApostas.Rows[i].Cells[11].Style.BackColor = Color.Yellow;
+                    dgvApostas.Rows[i].Cells[10].Style.BackColor = Color.Yellow;
                 if (flag8 == "True")
-                    dgvApostas.Rows[i].Cells[12].Style.BackColor = Color.Yellow;
+                    dgvApostas.Rows[i].Cells[11].Style.BackColor = Color.Yellow;
                 if (flag9 == "True")
-                    dgvApostas.Rows[i].Cells[13].Style.BackColor = Color.Yellow;
+                    dgvApostas.Rows[i].Cells[12].Style.BackColor = Color.Yellow;
                 if (flag10 == "True")
-                    dgvApostas.Rows[i].Cells[14].Style.BackColor = Color.Yellow;
+                    dgvApostas.Rows[i].Cells[13].Style.BackColor = Color.Yellow;
 
             }
         }
