@@ -35,7 +35,24 @@ namespace SorteioMagnata.Logica
             cb_Apostadores.DataSource = dt1;
 
             #endregion Popular Apostadores na Combo
+            CarregarCombobox();
+            con.FecharCon();
 
+        }
+        
+        private void CarregarCombobox()
+        {
+            con.AbrirCon();
+            sql = "SELECT * FROM status order by status asc";
+            cmd = new MySqlCommand(sql, con.con);
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            da.SelectCommand = cmd;
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            cbStatus.DataSource = dt;
+            cbStatus.DisplayMember = "status";
             con.FecharCon();
 
         }
@@ -113,6 +130,7 @@ namespace SorteioMagnata.Logica
                 " numeroaposta8, aposta8flag," +
                 " numeroaposta9, aposta9flag," +
                 "  numeroaposta10, aposta10flag," +
+                "status, " +
                 " data) " +
                 "VALUES " +
                "(@nomecartela, " +
@@ -127,6 +145,7 @@ namespace SorteioMagnata.Logica
                " @numeroaposta8, FALSE," +
                " @numeroaposta9, FALSE," +
                " @numeroaposta10, FALSE," +
+               "@status, " +
                " curDate())";
             cmd = new MySqlCommand(sql, con.con);
             
@@ -141,6 +160,8 @@ namespace SorteioMagnata.Logica
             cmd.Parameters.AddWithValue("@numeroaposta8", txtNumeroAposta8.Text.PadLeft(2, '0'));
             cmd.Parameters.AddWithValue("@numeroaposta9", txtNumeroAposta9.Text.PadLeft(2, '0'));
             cmd.Parameters.AddWithValue("@numeroaposta10", txtNumeroAposta10.Text.PadLeft(2, '0'));
+            cmd.Parameters.AddWithValue("@status", cbStatus.Text);
+
 
             //COUNT ID APOSTADOR PARA VER QUAL NOME COLOCAR
             MySqlCommand cmdVerificar;
@@ -191,6 +212,7 @@ namespace SorteioMagnata.Logica
                 "numeroaposta9 as n9, " +
                 "numeroaposta10 as n10, " +
                 "acertos, " +
+                "status, " +
                 "data " +
                 "FROM apostas order by acertos desc";
             cmd = new MySqlCommand(sql, con.con);
@@ -252,6 +274,7 @@ namespace SorteioMagnata.Logica
                 "numeroaposta8 as n8, " +
                 "numeroaposta9 as n9, " +
                 "numeroaposta10 as n10, " +
+                "status, " +
                 "data " +
                 "FROM apostas order by nomecartela asc";
             cmd = new MySqlCommand(sql, con.con);
@@ -262,6 +285,7 @@ namespace SorteioMagnata.Logica
             da.Fill(dt);
 
             Grid.DataSource = dt;
+            CarregarCombobox();
             con.FecharCon();
             Listar();
         }

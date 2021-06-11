@@ -41,6 +41,7 @@ namespace SorteioMagnata
                 "numeroaposta9 as n9, " +
                 "numeroaposta10 as n10, " +
                 "acertos, " +
+                "status, " +
                 "data " +
                 "FROM apostas order by acertos desc";
             cmd = new MySqlCommand(sql, con.con);
@@ -52,6 +53,23 @@ namespace SorteioMagnata
 
             dgvApostas.DataSource = dt; 
             PintarNumerosSorteados();
+            CarregarCombobox();
+            con.FecharCon();
+        }
+
+        private void CarregarCombobox()
+        {
+            con.AbrirCon();
+            sql = "SELECT * FROM status order by status asc";
+            cmd = new MySqlCommand(sql, con.con);
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            da.SelectCommand = cmd;
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            cbStatus.DataSource = dt;
+            cbStatus.DisplayMember = "status";
             con.FecharCon();
         }
 
@@ -68,7 +86,7 @@ namespace SorteioMagnata
                         break;
                     case "Cartela":
                         coluna.DisplayIndex = 1;
-                        coluna.Width = 280;
+                        coluna.Width = 200;
                         coluna.HeaderText = "Participantes";
                         break;
                     case "n1":
@@ -139,12 +157,16 @@ namespace SorteioMagnata
                         coluna.DisplayIndex = 15;
                         coluna.Width = 30;
                         break;
+                    case "status":
+                        coluna.DisplayIndex = 16;
+                        coluna.Width = 120;
+                        coluna.HeaderText = "Status";
+                        break;
                     default:
                         break;
                 }
             }
         }
-
         private void dgvApostas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             dgvApostas.Rows[e.RowIndex].Cells["editar"].ToolTipText = "Clique aqui para editar";
@@ -165,6 +187,8 @@ namespace SorteioMagnata
                 btnFechar.Visible = true;
                 btnAleatorio.Enabled = true;
                 btnAleatorio.Visible = true;
+                cbStatus.Enabled = true;
+                cbStatus.Visible = true;
 
                 txtNumeroAposta1.Enabled = true;
                 txtNumeroAposta2.Enabled = true;
@@ -232,6 +256,8 @@ namespace SorteioMagnata
             btnFechar.Visible = false;
             btnAleatorio.Enabled = false;
             btnAleatorio.Visible = false;
+            cbStatus.Enabled = false;
+            cbStatus.Visible = false;
 
             txtNumeroAposta1.Enabled = false;
             txtNumeroAposta2.Enabled = false;
@@ -268,6 +294,7 @@ namespace SorteioMagnata
                 "numeroaposta9 as n9, " +
                 "numeroaposta10 as n10, " +
                 "acertos, " +
+                "status, " +
                 "data " +
                 "FROM apostas order by acertos desc";
             cmd = new MySqlCommand(sql, con.con);
@@ -295,13 +322,11 @@ namespace SorteioMagnata
                 "numeroaposta7=@numeroaposta7," +
                 "numeroaposta8=@numeroaposta8," +
                 "numeroaposta9=@numeroaposta9," +
-                "numeroaposta10=@numeroaposta10 " +
+                "numeroaposta10=@numeroaposta10, " +
+                "status=@status " +
                 "WHERE id=@id";
             cmd = new MySqlCommand(sql, con.con);
-
-            DataGridViewRow dgv = dgvApostas.Rows[1];
-
-            
+                        
             cmd.Parameters.AddWithValue("@numeroaposta1", txtNumeroAposta1.Text.PadLeft(2, '0'));
             cmd.Parameters.AddWithValue("@numeroaposta2", txtNumeroAposta2.Text.PadLeft(2, '0'));
             cmd.Parameters.AddWithValue("@numeroaposta3", txtNumeroAposta3.Text.PadLeft(2, '0'));
@@ -312,6 +337,7 @@ namespace SorteioMagnata
             cmd.Parameters.AddWithValue("@numeroaposta8", txtNumeroAposta8.Text.PadLeft(2, '0'));
             cmd.Parameters.AddWithValue("@numeroaposta9", txtNumeroAposta9.Text.PadLeft(2, '0'));
             cmd.Parameters.AddWithValue("@numeroaposta10", txtNumeroAposta10.Text.PadLeft(2, '0'));
+            cmd.Parameters.AddWithValue("@status", cbStatus.Text);
             cmd.Parameters.AddWithValue("@id", idAposta);
 
             cmd.ExecuteNonQuery();
@@ -341,6 +367,7 @@ namespace SorteioMagnata
                 "numeroaposta9 as n9, " +
                 "numeroaposta10 as n10, " +
                 "acertos, " +
+                "status, " +
                 "data " +
                 "FROM apostas order by acertos desc";
             cmd = new MySqlCommand(sql, con.con);
@@ -411,25 +438,25 @@ namespace SorteioMagnata
                 var numero10 = dt2.Rows[i][20].ToString();
 
                 if (flag1 == "True")
-                    dgvApostas.Rows[i].Cells[4].Style.BackColor = Color.Yellow;
-                if (flag2 == "True")
                     dgvApostas.Rows[i].Cells[5].Style.BackColor = Color.Yellow;
-                if (flag3 == "True")
+                if (flag2 == "True")
                     dgvApostas.Rows[i].Cells[6].Style.BackColor = Color.Yellow;
-                if (flag4 == "True")
+                if (flag3 == "True")
                     dgvApostas.Rows[i].Cells[7].Style.BackColor = Color.Yellow;
-                if (flag5 == "True")
+                if (flag4 == "True")
                     dgvApostas.Rows[i].Cells[8].Style.BackColor = Color.Yellow;
-                if (flag6 == "True")
+                if (flag5 == "True")
                     dgvApostas.Rows[i].Cells[9].Style.BackColor = Color.Yellow;
-                if (flag7 == "True")
+                if (flag6 == "True")
                     dgvApostas.Rows[i].Cells[10].Style.BackColor = Color.Yellow;
-                if (flag8 == "True")
+                if (flag7 == "True")
                     dgvApostas.Rows[i].Cells[11].Style.BackColor = Color.Yellow;
-                if (flag9 == "True")
+                if (flag8 == "True")
                     dgvApostas.Rows[i].Cells[12].Style.BackColor = Color.Yellow;
-                if (flag10 == "True")
+                if (flag9 == "True")
                     dgvApostas.Rows[i].Cells[13].Style.BackColor = Color.Yellow;
+                if (flag10 == "True")
+                    dgvApostas.Rows[i].Cells[14].Style.BackColor = Color.Yellow;
 
             }
         }

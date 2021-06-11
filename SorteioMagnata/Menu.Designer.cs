@@ -54,6 +54,7 @@ namespace SorteioMagnata
             this.btnCambistas = new System.Windows.Forms.Button();
             this.btnApostadores = new System.Windows.Forms.Button();
             this.pnlMenuGrid = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -66,7 +67,6 @@ namespace SorteioMagnata
             this.label12 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.menuTopo.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.pnlMenuGrid.SuspendLayout();
@@ -292,7 +292,7 @@ namespace SorteioMagnata
             this.btnSorteios.Text = "SORTEIOS";
             this.btnSorteios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSorteios.UseVisualStyleBackColor = true;
-            //this.btnSorteios.Click += new System.EventHandler(this.btnSorteios_Click);
+            this.btnSorteios.Click += new System.EventHandler(this.btnSorteios_Click);
             // 
             // btnApostas
             // 
@@ -361,6 +361,13 @@ namespace SorteioMagnata
             this.pnlMenuGrid.Size = new System.Drawing.Size(911, 688);
             this.pnlMenuGrid.TabIndex = 2;
             this.pnlMenuGrid.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMenuGrid_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(2, 62);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(909, 622);
+            this.panel1.TabIndex = 16;
             // 
             // label13
             // 
@@ -486,13 +493,6 @@ namespace SorteioMagnata
             this.label11.Size = new System.Drawing.Size(53, 16);
             this.label11.TabIndex = 7;
             this.label11.Text = "Nome:";
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(2, 62);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(909, 622);
-            this.panel1.TabIndex = 16;
             // 
             // FrmMenu
             // 

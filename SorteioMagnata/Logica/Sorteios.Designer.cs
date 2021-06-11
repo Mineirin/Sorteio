@@ -41,6 +41,7 @@ namespace SorteioMagnata.Logica
             this.label1 = new System.Windows.Forms.Label();
             this.imgResultSorteio = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnReset = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnRelatorioLista = new System.Windows.Forms.Button();
@@ -191,6 +192,7 @@ namespace SorteioMagnata.Logica
             // 
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btnReset);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.btnRelatorioLista);
@@ -200,8 +202,22 @@ namespace SorteioMagnata.Logica
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(64, 650);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(638, 780);
+            this.panel2.Size = new System.Drawing.Size(634, 780);
             this.panel2.TabIndex = 24;
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.Red;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.Location = new System.Drawing.Point(402, 19);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(142, 33);
+            this.btnReset.TabIndex = 30;
+            this.btnReset.Text = "Começar novo Sorteio";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Visible = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // label5
             // 
@@ -232,7 +248,7 @@ namespace SorteioMagnata.Logica
             this.btnRelatorioLista.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRelatorioLista.FlatAppearance.BorderSize = 0;
             this.btnRelatorioLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRelatorioLista.Location = new System.Drawing.Point(484, 5);
+            this.btnRelatorioLista.Location = new System.Drawing.Point(572, 5);
             this.btnRelatorioLista.Name = "btnRelatorioLista";
             this.btnRelatorioLista.Size = new System.Drawing.Size(50, 50);
             this.btnRelatorioLista.TabIndex = 25;
@@ -262,7 +278,7 @@ namespace SorteioMagnata.Logica
             this.Grid.Name = "Grid";
             this.Grid.ReadOnly = true;
             this.Grid.RowHeadersWidth = 51;
-            this.Grid.Size = new System.Drawing.Size(635, 646);
+            this.Grid.Size = new System.Drawing.Size(631, 646);
             this.Grid.TabIndex = 0;
             this.Grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
             // 
@@ -272,9 +288,10 @@ namespace SorteioMagnata.Logica
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Location = new System.Drawing.Point(132, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(415, 13);
+            this.label2.Size = new System.Drawing.Size(499, 13);
             this.label2.TabIndex = 26;
-            this.label2.Text = "____________________________________________________________________";
+            this.label2.Text = "_________________________________________________________________________________" +
+    "_";
             // 
             // label3
             // 
@@ -282,9 +299,10 @@ namespace SorteioMagnata.Logica
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Location = new System.Drawing.Point(132, 58);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(415, 13);
+            this.label3.Size = new System.Drawing.Size(499, 13);
             this.label3.TabIndex = 27;
-            this.label3.Text = "____________________________________________________________________";
+            this.label3.Text = "_________________________________________________________________________________" +
+    "_";
             // 
             // btnRelatorioIMG
             // 
@@ -306,7 +324,7 @@ namespace SorteioMagnata.Logica
             this.lblNomeSorteio.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblNomeSorteio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNomeSorteio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeSorteio.Location = new System.Drawing.Point(117, 356);
+            this.lblNomeSorteio.Location = new System.Drawing.Point(234, 351);
             this.lblNomeSorteio.Name = "lblNomeSorteio";
             this.lblNomeSorteio.Size = new System.Drawing.Size(0, 24);
             this.lblNomeSorteio.TabIndex = 27;
@@ -451,7 +469,7 @@ namespace SorteioMagnata.Logica
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(797, 761);
+            this.ClientSize = new System.Drawing.Size(814, 761);
             this.Controls.Add(this.lblNumero5);
             this.Controls.Add(this.lblNumero4);
             this.Controls.Add(this.lblNumero3);
@@ -526,5 +544,6 @@ namespace SorteioMagnata.Logica
         private System.Windows.Forms.Label lblNumero5;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Button btnReset;
     }
 }

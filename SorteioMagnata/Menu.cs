@@ -200,39 +200,18 @@ namespace SorteioMagnata
             form.Location = new Point(this.Width / 2 - 430, this.Height / 2 - 20);
         }
 
-       
-        
-
-       /* private void btnSorteios_Click(object sender, EventArgs e)
+        private void btnSorteios_Click(object sender, EventArgs e)
         {
-            con.AbrirCon();
-            Grid.DataSource = null;
-            sql = "SELECT nomesorteio as 'Sorteio'," +
-                " numero1 as n1, " +
-                " numero2 as n2, " +
-                " numero3 as n3, " +
-                " numero4 as n4, " +
-                " numero5 as n5, " +
-                " data " +
-                " FROM resultsorteio order by nomesorteio asc";
-            cmd = new MySqlCommand(sql, con.con);
-            MySqlDataAdapter da = new MySqlDataAdapter();
-            da.SelectCommand = cmd;
+            gridSorteio form = new gridSorteio();
+            form.Show();
+            form.Location = new Point(this.Width / 2 - 430, this.Height / 2 - 20);
 
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-
-            Grid.DataSource = dt;
-            FormatarDGSorteios();
-            con.FecharCon();
-
-        }*/
+        }
 
         private void FrmMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
 
-       
     }
 }

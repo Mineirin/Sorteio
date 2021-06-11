@@ -53,6 +53,8 @@ namespace SorteioMagnata.Logica
             this.label2 = new System.Windows.Forms.Label();
             this.Grid = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
+            this.cbStatus = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -61,6 +63,8 @@ namespace SorteioMagnata.Logica
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.cbStatus);
             this.panel1.Controls.Add(this.cb_Apostadores);
             this.panel1.Controls.Add(this.btnSalvarSorteio);
             this.panel1.Controls.Add(this.btnAleatorio);
@@ -83,7 +87,7 @@ namespace SorteioMagnata.Logica
             // cb_Apostadores
             // 
             this.cb_Apostadores.FormattingEnabled = true;
-            this.cb_Apostadores.Location = new System.Drawing.Point(155, 29);
+            this.cb_Apostadores.Location = new System.Drawing.Point(155, 17);
             this.cb_Apostadores.Name = "cb_Apostadores";
             this.cb_Apostadores.Size = new System.Drawing.Size(264, 21);
             this.cb_Apostadores.TabIndex = 38;
@@ -214,7 +218,7 @@ namespace SorteioMagnata.Logica
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(52, 27);
+            this.label1.Location = new System.Drawing.Point(52, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 20);
             this.label1.TabIndex = 0;
@@ -317,6 +321,24 @@ namespace SorteioMagnata.Logica
             this.label3.TabIndex = 35;
             this.label3.Text = "____________________________________________________________________";
             // 
+            // cbStatus
+            // 
+            this.cbStatus.FormattingEnabled = true;
+            this.cbStatus.Location = new System.Drawing.Point(155, 49);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(134, 21);
+            this.cbStatus.TabIndex = 39;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(82, 47);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 20);
+            this.label6.TabIndex = 40;
+            this.label6.Text = "Status:";
+            // 
             // FrmApostas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,5 +388,7 @@ namespace SorteioMagnata.Logica
         private System.Windows.Forms.Button btnAleatorio;
         private System.Windows.Forms.Button btnSalvarSorteio;
         private System.Windows.Forms.ComboBox cb_Apostadores;
+        private System.Windows.Forms.ComboBox cbStatus;
+        private System.Windows.Forms.Label label6;
     }
 }

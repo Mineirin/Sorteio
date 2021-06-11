@@ -33,8 +33,6 @@ namespace SorteioMagnata
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gridApostas));
             this.dgvApostas = new System.Windows.Forms.DataGridView();
-            this.editar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.excluir = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.lbNome = new System.Windows.Forms.Label();
@@ -50,6 +48,9 @@ namespace SorteioMagnata
             this.txtNumeroAposta2 = new System.Windows.Forms.TextBox();
             this.txtNumeroAposta1 = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
+            this.cbStatus = new System.Windows.Forms.ComboBox();
+            this.editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.excluir = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvApostas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,37 +84,21 @@ namespace SorteioMagnata
             this.dgvApostas.Name = "dgvApostas";
             this.dgvApostas.ReadOnly = true;
             this.dgvApostas.RowHeadersWidth = 4;
-            this.dgvApostas.Size = new System.Drawing.Size(801, 467);
+            this.dgvApostas.Size = new System.Drawing.Size(846, 467);
             this.dgvApostas.TabIndex = 2;
             this.dgvApostas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvApostas_CellContentClick);
             this.dgvApostas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvApostas_CellFormatting);
             this.dgvApostas.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvApostas_DataBindingComplete);
-            // 
-            // editar
-            // 
-            this.editar.HeaderText = "";
-            this.editar.Image = ((System.Drawing.Image)(resources.GetObject("editar.Image")));
-            this.editar.Name = "editar";
-            this.editar.ReadOnly = true;
-            this.editar.Width = 30;
-            // 
-            // excluir
-            // 
-            this.excluir.HeaderText = "";
-            this.excluir.Image = ((System.Drawing.Image)(resources.GetObject("excluir.Image")));
-            this.excluir.Name = "excluir";
-            this.excluir.ReadOnly = true;
-            this.excluir.Width = 30;
             // 
             // btnFechar
             // 
             this.btnFechar.Enabled = false;
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.Location = new System.Drawing.Point(627, -2);
+            this.btnFechar.Image = global::SorteioMagnata.Properties.Resources.icons8_excluir_64;
+            this.btnFechar.Location = new System.Drawing.Point(801, 1);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(65, 65);
+            this.btnFechar.Size = new System.Drawing.Size(44, 44);
             this.btnFechar.TabIndex = 37;
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Visible = false;
@@ -125,7 +110,7 @@ namespace SorteioMagnata
             this.btnSalvar.FlatAppearance.BorderSize = 0;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
-            this.btnSalvar.Location = new System.Drawing.Point(556, -3);
+            this.btnSalvar.Location = new System.Drawing.Point(711, -2);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(65, 65);
             this.btnSalvar.TabIndex = 36;
@@ -152,7 +137,7 @@ namespace SorteioMagnata
             this.btnAleatorio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAleatorio.FlatAppearance.BorderSize = 0;
             this.btnAleatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAleatorio.Location = new System.Drawing.Point(500, 5);
+            this.btnAleatorio.Location = new System.Drawing.Point(655, 5);
             this.btnAleatorio.Name = "btnAleatorio";
             this.btnAleatorio.Size = new System.Drawing.Size(50, 50);
             this.btnAleatorio.TabIndex = 48;
@@ -273,11 +258,38 @@ namespace SorteioMagnata
             this.txtNome.TabIndex = 49;
             this.txtNome.Visible = false;
             // 
+            // cbStatus
+            // 
+            this.cbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cbStatus.FormattingEnabled = true;
+            this.cbStatus.Location = new System.Drawing.Point(458, 15);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(191, 28);
+            this.cbStatus.TabIndex = 50;
+            this.cbStatus.Visible = false;
+            // 
+            // editar
+            // 
+            this.editar.HeaderText = "";
+            this.editar.Image = ((System.Drawing.Image)(resources.GetObject("editar.Image")));
+            this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
+            this.editar.Width = 30;
+            // 
+            // excluir
+            // 
+            this.excluir.HeaderText = "";
+            this.excluir.Image = ((System.Drawing.Image)(resources.GetObject("excluir.Image")));
+            this.excluir.Name = "excluir";
+            this.excluir.ReadOnly = true;
+            this.excluir.Width = 30;
+            // 
             // gridApostas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 579);
+            this.ClientSize = new System.Drawing.Size(846, 579);
+            this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnAleatorio);
             this.Controls.Add(this.txtNumeroAposta10);
@@ -306,8 +318,6 @@ namespace SorteioMagnata
         #endregion
 
         private System.Windows.Forms.DataGridView dgvApostas;
-        private System.Windows.Forms.DataGridViewImageColumn editar;
-        private System.Windows.Forms.DataGridViewImageColumn excluir;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label lbNome;
@@ -323,5 +333,8 @@ namespace SorteioMagnata
         private System.Windows.Forms.TextBox txtNumeroAposta2;
         private System.Windows.Forms.TextBox txtNumeroAposta1;
         private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.ComboBox cbStatus;
+        private System.Windows.Forms.DataGridViewImageColumn editar;
+        private System.Windows.Forms.DataGridViewImageColumn excluir;
     }
 }

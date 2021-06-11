@@ -175,6 +175,9 @@
     <EmbeddedResource Include="gridCambistas.resx">
       <DependentUpon>gridCambistas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="gridSorteio.resx">
+      <DependentUpon>gridSorteio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Logica\Apostas.resx">
       <DependentUpon>Apostas.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +198,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Conexao.datasource" />
@@ -233,6 +237,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-excluir-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

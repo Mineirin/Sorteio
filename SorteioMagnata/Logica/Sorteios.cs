@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace SorteioMagnata.Logica
@@ -145,9 +144,9 @@ namespace SorteioMagnata.Logica
                 }
 
                 int acertosTotais = acertosAnterior + acertosAtual;
-
-                if (acertosTotais == 10)
+                if (acertosTotais ==11)
                 {
+                   
                     try
                     {
                         con.AbrirCon();
@@ -179,13 +178,11 @@ namespace SorteioMagnata.Logica
                         FormatarDGApostas();
                         con.FecharCon();
 
-                        LimparTabelaSorteio();
-                        FinalizarSorteio();
-
-                        DialogResult dialogResult = MessageBox.Show("Alguem já ganhou! \n\n Deseja exportar a lista de apostas?", "Começar Novo Sorteio", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                        if (dialogResult == DialogResult.Yes)
-                            ExportarParaExcel(dtb);
-                       
+                        
+                        PintarNumerosSorteados();
+                        btnReset.Visible = true;
+                        DialogResult dialogResult = MessageBox.Show("Alguem já ganhou! ");
+                                                    
                         return;
                     }
                     catch (Exception ex)
@@ -273,33 +270,6 @@ namespace SorteioMagnata.Logica
             }
         }
 
-        private void ExportarParaExcel(DataTable dtb)
-        {
-            try
-            {
-                using (ExcelPackage pck = new ExcelPackage())
-                {
-                    ExcelWorksheet ws = pck.Workbook.Worksheets.Add("Apostas");
-                    ws.Cells["A1"].LoadFromDataTable(dtb, true);
-                    SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-                    saveFileDialog1.InitialDirectory = @"C:\";
-                    saveFileDialog1.Title = "Salvar arquivo em:";
-                    saveFileDialog1.CheckPathExists = true;
-                    saveFileDialog1.DefaultExt = "xlsx";
-                    saveFileDialog1.Filter = "Arquivo do Excel *.xlsx | *.xlsx";
-                    saveFileDialog1.FilterIndex = 2;
-                    saveFileDialog1.RestoreDirectory = true;
-                    saveFileDialog1.ShowDialog();
-                    pck.SaveAs(new System.IO.FileInfo(saveFileDialog1.FileName));
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
         private static Bitmap DrawControlToBitmap(Control control)
         {
             Bitmap bitmap = new Bitmap(control.Width, control.Height);
@@ -332,7 +302,9 @@ namespace SorteioMagnata.Logica
             Grid.Columns[11].HeaderText = "Acertos";
             Grid.Columns[12].HeaderText = "Data";
 
-            Grid.Columns[0].Width = 130;
+
+
+            Grid.Columns[0].Width = 120;
             Grid.Columns[1].Width = 30;
             Grid.Columns[2].Width = 30;
             Grid.Columns[3].Width = 30;
@@ -343,7 +315,7 @@ namespace SorteioMagnata.Logica
             Grid.Columns[8].Width = 30;
             Grid.Columns[9].Width = 30;
             Grid.Columns[10].Width = 45;
-            Grid.Columns[11].Width = 100;
+            Grid.Columns[11].Width = 80;
         }
 
 
@@ -543,6 +515,12 @@ namespace SorteioMagnata.Logica
         private void imgNumero4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            FinalizarSorteio();
+            LimparTabelaSorteio();
         }
     }
 }
